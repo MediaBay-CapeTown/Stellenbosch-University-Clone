@@ -244,6 +244,7 @@ input:checked + .slider:before {
   <body>
 
     <!-- Sticky Header -->
+    <!-- Sticky Header -->
     <header class="sticky top-0 z-50 bg-[#420303] shadow-custom">
 
 
@@ -252,17 +253,39 @@ input:checked + .slider:before {
         <div class="flex items-center justify-between h-16">
           <!-- Logo -->
           <a href="homepage.html" class="flex items-center gap-3 flex-shrink-0">
-            <div>
+            <div
+              class="w-10 h-10 bg-secondary-400 rounded-small flex items-center justify-center"
+            >
               <img
-                src="https://www.su.ac.za/themes/custom/su2023/images/logo.svg"
+                src="https://www.google.com/s2/favicons?domain=su.ac.za&sz=256"
                 alt="Stellenbosch University Icon"
-                style="width: 140px; height: 140px; vertical-align: middle"
+                style="width: 24px; height: 24px; vertical-align: middle"
               />
+            </div>
+            <div class="hidden sm:block">
+              <div
+                class="font-heading text-neutral-50 text-lg sm:text-xl lg:text-2xl font-semibold leading-tight"
+                data-key="brandNameShort"
+              >
+                Stellenbosch
+              </div>
+              <div
+                class="text-secondary-300 text-xs font-medium tracking-widest uppercase"
+                data-key="brandUniversity"
+              >
+                University
+              </div>
             </div>
           </a>
 
           <!-- Nav links -->
           <nav class="hidden lg:flex items-center gap-1">
+            <a
+              href="about-page.html"
+              class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors"
+              data-key="navAbout"
+              >About</a
+            >
 
             <!-- Academics dropdown -->
             <div class="dropdown relative">
@@ -285,7 +308,7 @@ input:checked + .slider:before {
                 </svg>
               </button>
               <div
-                class="dropdown-menu hidden absolute top-full left-0 w-52 bg-white rounded-large shadow-custom-hover border border-neutral-200 py-1 z-50"
+                class="dropdown-menu hidden absolute top-full left-0 mt-1 w-52 bg-white rounded-large shadow-custom-hover border border-neutral-200 py-1 z-50"
               >
                 <a
                   href="undergraduate.html"
@@ -328,7 +351,7 @@ input:checked + .slider:before {
                 </svg>
               </button>
               <div
-                class="dropdown-menu hidden absolute top-full left-0 w-52 bg-white rounded-large shadow-custom-hover border border-neutral-200 py-1 z-50"
+                class="dropdown-menu hidden absolute top-full left-0 mt-1 w-52 bg-white rounded-large shadow-custom-hover border border-neutral-200 py-1 z-50"
               >
                 <a
                   href="staff-page.html"
@@ -337,7 +360,7 @@ input:checked + .slider:before {
                   >Staff</a
                 >
                 <a
-                href="students-page.html"
+                href="student-page.html"
                 class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
                 data-key="navStudents"
                 >Students</a
@@ -370,7 +393,7 @@ input:checked + .slider:before {
                 </svg>
               </button>
               <div
-                class="dropdown-menu hidden absolute top-full left-0 w-52 bg-white rounded-large shadow-custom-hover border border-neutral-200 py-1 z-50"
+                class="dropdown-menu hidden absolute top-full left-0 mt-1 w-52 bg-white rounded-large shadow-custom-hover border border-neutral-200 py-1 z-50"
               >
                 <a
                   href="https://www.su.ac.za/en"
@@ -423,12 +446,28 @@ input:checked + .slider:before {
            
           <div class="hidden lg:flex items-center gap-2">
             <a
-              href="https://www.su.ac.za/en/apply"
+              href="undergraduate.html"
               class="bg-secondary-400 hover:bg-secondary-300 text-primary-900 text-sm font-semibold px-4 py-2 rounded-small transition-colors"
               data-key="ctaApplyNow"
               >Apply Now</a
             >
-
+            <button
+              class="text-neutral-200 hover:text-neutral-50 p-2 rounded-small hover:bg-primary-800 transition-colors"
+            >
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
           </div>
           <div class="flex items-center gap-2 text-white text-sm font-semibold">
             <span data-key="labelEn">EN</span>
