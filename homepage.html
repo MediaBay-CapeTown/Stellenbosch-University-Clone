@@ -55,12 +55,116 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script src="js/homepage.js"></script>
     <script src="js/global.js"></script>
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/homepage.css" />
 
 
+   <style>
+     /* Consolidated global styles extracted from HTML files */
+
+:root {
+  --font-heading-name: 'Playfair Display';
+  --font-body-name: 'Inter';
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --letter-spacing-heading: -0.25px;
+  --letter-spacing-body: 0px;
+  --space-base: 1rem;
+  --radius-small: 4px;
+  --radius-large: 8px;
+  --border-width: 1px;
+  --shadow-color: 10 26 54;
+  --shadow-offset-x: 0px;
+  --shadow-offset-y: 4px;
+  --shadow-blur: 16px;
+  --shadow-spread: 0px;
+  --shadow-opacity: 0.12;
+  --shadow-custom: 0px 4px 16px 0px rgba(10, 26, 54, 0.12);
+  --shadow-custom-hover: 0px 8px 28px 0px rgba(10, 26, 54, 0.2);
+}
+
+/* Utility / Navigation */
+.dropdown:hover .dropdown-menu { display: block; }
+.nav-link-hover:hover { color: #fbc352; }
+
+/* Hero & Overlays */
+.hero-overlay { background: linear-gradient(135deg, rgba(10, 26, 54, 0.82) 0%, rgba(30, 58, 110, 0.65) 60%, rgba(30, 58, 110, 0.3) 100%); }
+.page-hero-overlay { background: linear-gradient(135deg, rgba(10, 26, 54, 0.90) 0%, rgba(30, 58, 110, 0.75) 60%, rgba(30, 58, 110, 0.4) 100%); }
+
+/* Cards */
+.card-hover:hover { transform: translateY(-3px); box-shadow: var(--shadow-custom-hover); }
+.card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.research-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-custom-hover); }
+.research-card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+
+/* Tags & Staff */
+.theme-tag { display: inline-flex; align-items: center; gap: 4px; }
+.staff-card:hover { border-color: #5a7ab8; box-shadow: var(--shadow-custom-hover); }
+.staff-card { transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+.filter-btn.active { background-color: #1e3a6e; color: #f8f9fa; border-color: #1e3a6e; }
+
+/* Timeline */
+.timeline-line::before {
+  content: '';
+  position: absolute;
+  left: 19px;
+  top: 32px;
+  bottom: 0;
+  width: 2px;
+  background: #e9ecef;
+}
+
+/* Tabs */
+.tab-active { border-bottom: 3px solid #fab52e; color: #0a1a36; font-weight: 600; }
+.tab-inactive { border-bottom: 3px solid transparent; color: #6c757d; }
+.tab-inactive:hover { color: #1e3a6e; border-bottom-color: #c5d0e6; }
+.prog-tab-content { display: none; }
+.prog-tab-content.active { display: block; }
+
+/* Sticky / Sidebars */
+.sticky-sidebar { position: sticky; top: 80px; }
+
+/* Supervisor / Module Cards */
+.supervisor-card:hover { border-color: #5a7ab8; box-shadow: var(--shadow-custom-hover); }
+.supervisor-card { transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+.module-tag { transition: background-color 0.15s ease; }
+
+/* Accordion */
+.accordion-content { display: none; }
+.accordion-content.open { display: block; }
+.accordion-icon { transition: transform 0.2s ease; }
+.accordion-icon.open { transform: rotate(180deg); }
+
+/* Small helpers */
+.shadow-custom { box-shadow: var(--shadow-custom); }
+.rounded-small { border-radius: var(--radius-small); }
+.rounded-large { border-radius: var(--radius-large); }
+
+/* Mobile navigation toggling */
+#main-nav {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#main-nav.flex {
+  display: flex;
+}
+@media (min-width: 1024px) {
+  #main-nav {
+    display: flex !important;
+    flex-direction: row;
+  }
+}
+
+/* Dropdowns: allow click-to-open via JavaScript */
+.dropdown.open .dropdown-menu {
+  display: block !important;
+}
+
+/* End of consolidated styles */
+   
+    </style>
 
 
   </head>
@@ -244,13 +348,9 @@
               >
               </div>
             </div>
-            <a
-              href="contact-page.html"
-              class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors"
-              data-key="navContact"
-              >Contact</a
-            >
-            
+        
+           <a href="#contact" class="nav-link-hover ...">Contact</a>
+ 
           </nav>
 
           <!-- CTA Buttons -->
@@ -274,6 +374,11 @@
           
             <span data-key="labelAf">AF</span>
           </div>
+
+                   <button id="menuToggle"
+     class="text-neutral-200 p-2 rounded hover:bg-primary-800 transition">
+    <span class="material-symbols-outlined text-3xl">menu</span>
+  </button>
           
         </div>
       </div>
@@ -291,75 +396,77 @@
     </div>
 
     <h1 class="text-5xl md:text-7xl font-black leading-[1.1] tracking-tight">
-      Faculty of <span style="color: #800000;">Computer Science</span>
+      Faculty of <span style="color: #630202;">Computer Science</span>
     </h1>
 
     <h2 class="text-3xl md:text-4xl font-bold">Welcome</h2>
 
     <p class="text-lg md:text-xl text-slate-600 leading-relaxed">
-      The Department of Computer Science was founded in 1972...
+     The Department of Computer Science was founded in 1972. We have now merged with Mathematics and Applied Mathematics to form the Computer Science Division in the Department of Mathematical Sciences.
+
+We currently have 11 full members of academic staff whose research activities span a range of subject areas, including Automata Theory, Broadband and Mobile Networks, Software Engineering, Program Testing and Verification, Robotics, Natural Language Processing, and Machine Learning.
     </p>
 
   </div>
 
   <!-- RIGHT SIDE (Research Slider) -->
-  <div>
-    <div class="flex items-end justify-between mb-6">
-      <div>
-        <h2 class="text-2xl font-black">Research & Innovation</h2>
-        <p class="text-slate-500 text-sm">Pioneering studies making global impact.</p>
-      </div>
-    </div>
-
-    <!-- Horizontal Scroll Container -->
-    <div class="relative">
-      <div id="researchSlider"
-           class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4">
-
-        <!-- Card 1 -->
-        <div class="min-w-[280px] snap-start bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-          <div class="aspect-video bg-slate-300 rounded-xl mb-4"></div>
-          <h4 class="font-bold text-lg">AI & Ethics Lab</h4>
-          <p class="text-slate-500 text-sm">Machine Learning • Ethics</p>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="min-w-[280px] snap-start bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-          <div class="aspect-video bg-slate-400 rounded-xl mb-4"></div>
-          <h4 class="font-bold text-lg">Quantum Computing Hub</h4>
-          <p class="text-slate-500 text-sm">Future Tech • Innovation</p>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="min-w-[280px] snap-start bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-          <div class="aspect-video bg-slate-200 rounded-xl mb-4"></div>
-          <h4 class="font-bold text-lg">Robotics & Vision</h4>
-          <p class="text-slate-500 text-sm">Automation • AI Systems</p>
-        </div>
-
-      </div>
+<div>
+  <div class="flex items-end justify-between mb-6">
+    <div>
+      <h2 class="text-2xl font-black">Research & Innovation</h2>
+      <p class="text-slate-500 text-sm">Pioneering studies making global impact.</p>
     </div>
   </div>
+
+  <!-- Horizontal Scroll Container -->
+  <div class="relative">
+    <div id="researchSlider"
+         class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4">
+
+      <!-- Card 1 -->
+      <div class="min-w-[280px] snap-start bg-white p-6 rounded-2xl border border-slate-100 shadow-sm min-h-[500px] flex flex-col">
+        <div class="h-56 bg-slate-300 rounded-xl mb-4"></div>
+        <h4 class="font-bold text-lg mb-1">AI & Ethics Lab</h4>
+        <p class="text-slate-500 text-sm flex-grow">Machine Learning • Ethics</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="min-w-[280px] snap-start bg-white p-6 rounded-2xl border border-slate-100 shadow-sm min-h-[500px] flex flex-col">
+        <div class="h-56 bg-slate-400 rounded-xl mb-4"></div>
+        <h4 class="font-bold text-lg mb-1">Quantum Computing Hub</h4>
+        <p class="text-slate-500 text-sm flex-grow">Future Tech • Innovation</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="min-w-[280px] snap-start bg-white p-6 rounded-2xl border border-slate-100 shadow-sm min-h-[500px] flex flex-col">
+        <div class="h-56 bg-slate-200 rounded-xl mb-4"></div>
+        <h4 class="font-bold text-lg mb-1">Robotics & Vision</h4>
+        <p class="text-slate-500 text-sm flex-grow">Automation • AI Systems</p>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 </div>
 <div class="mt-20">
 <h2 class="text-2xl font-bold mb-8">Academic Programs</h2>
 <a href="undergraduate.html">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"><div class="bg-white p-10 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-primary/50 transition-all group">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"><div class="bg-white p-10 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-[#800000] transition-all group">
 <span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">school</span>
 <h3 class="text-xl font-bold mb-2">Undergraduate</h3>
 <p class="text-slate-500  text-sm">BSc programs in Computer Science, AI, and Software Engineering designed for industry readiness.</p>
 </div>
 </a>
 <a href="postgraduate.html">
-  <div class="bg-white  p-10 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-primary/50 transition-all group cursor-pointer">
+  <div class="bg-white  p-10 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-[#800000] transition-all group cursor-pointer">
     <span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">history_edu</span>
     <h3 class="text-xl font-bold mb-2">Postgraduate</h3>
     <p class="text-slate-500  text-sm">Advanced MSc courses specializing in Cybersecurity, Data Science, and Robotics.</p>
   </div>
 </a>
 
-<a href="postgraduate.html#honours"><div class="bg-white  p-10 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-primary/50 transition-all group">
+<a href="postgraduate.html#honours"><div class="bg-white  p-10 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-[#800000] transition-all group">
 <span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">biotech</span>
 <h3 class="text-xl font-bold mb-2">Masters &amp; Research</h3>
 <p class="text-slate-500  text-sm">World-leading MPhil and PhD opportunities in our state-of-the-art research laboratories.</p>
@@ -375,53 +482,54 @@
         Have questions? Our administrative team is here to assist you with any inquiries regarding the Computer Science Division, department facilities, or general support.
       </p>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+      <!-- Contact Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+  
+  <!-- Phone -->
+  <div class="flex items-start gap-4 p-4 border border-transparent rounded-xl hover:border-[#800000] transition-colors duration-300">
+    <div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+      <span class="material-symbols-outlined text-xl">call</span>
+    </div>
+    <div>
+      <p class="text-xs font-bold text-slate-400 uppercase">Phone</p>
+      <p class="text-sm font-semibold">+27 21 808 4232</p>
+    </div>
+  </div>
 
-        <!-- Phone -->
-        <div class="flex items-center gap-4">
-          <div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-            <span class="material-symbols-outlined text-xl">call</span>
-          </div>
-          <div>
-            <p class="text-xs font-bold text-slate-400 uppercase">Phone</p>
-            <p class="text-sm font-semibold">+27 21 808 4232</p>
-          </div>
-        </div>
+  <!-- Administrative Email -->
+  <div class="flex items-start gap-4 p-4 border border-transparent rounded-xl hover:border-[#800000] transition-colors duration-300">
+    <div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+      <span class="material-symbols-outlined text-xl">mail</span>
+    </div>
+    <div>
+      <p class="text-xs font-bold text-slate-400 uppercase">Administrative Email</p>
+      <p class="text-sm font-semibold">secretary@cs.sun.ac.za</p>
+    </div>
+  </div>
 
-        <!-- Administrative Email -->
-        <div class="flex items-center gap-4">
-          <div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-            <span class="material-symbols-outlined text-xl">mail</span>
-          </div>
-          <div>
-            <p class="text-xs font-bold text-slate-400 uppercase">Administrative Email</p>
-            <p class="text-sm font-semibold">secretary@cs.sun.ac.za</p>
-          </div>
-        </div>
+  <!-- Postgraduate Email -->
+  <div class="flex items-start gap-4 p-4 border border-transparent rounded-xl hover:border-[#800000] transition-colors duration-300">
+    <div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+      <span class="material-symbols-outlined text-xl">mail</span>
+    </div>
+    <div>
+      <p class="text-xs font-bold text-slate-400 uppercase">Postgraduate Enquiries</p>
+      <p class="text-sm font-semibold">postgrad@cs.sun.ac.za</p>
+    </div>
+  </div>
 
-        <!-- Postgraduate Email -->
-        <div class="flex items-center gap-4">
-          <div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-            <span class="material-symbols-outlined text-xl">mail</span>
-          </div>
-          <div>
-            <p class="text-xs font-bold text-slate-400 uppercase">Postgraduate Enquiries</p>
-            <p class="text-sm font-semibold">postgrad@cs.sun.ac.za</p>
-          </div>
-        </div>
+  <!-- Undergraduate Email -->
+  <div class="flex items-start gap-4 p-4 border border-transparent rounded-xl hover:border-[#800000] transition-colors duration-300">
+    <div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+      <span class="material-symbols-outlined text-xl">mail</span>
+    </div>
+    <div>
+      <p class="text-xs font-bold text-slate-400 uppercase">Undergraduate Enquiries</p>
+      <p class="text-sm font-semibold">undergrad@cs.sun.ac.za</p>
+    </div>
+  </div>
 
-        <!-- Undergraduate Email -->
-        <div class="flex items-center gap-4">
-          <div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-            <span class="material-symbols-outlined text-xl">mail</span>
-          </div>
-          <div>
-            <p class="text-xs font-bold text-slate-400 uppercase">Undergraduate Enquiries</p>
-            <p class="text-sm font-semibold">undergrad@cs.sun.ac.za</p>
-          </div>
-        </div>
-
-      </div>
+</div>
       
       <!-- Address -->
       <div class="pt-6">
@@ -518,6 +626,23 @@
 </aside>
 </div>
 </main>
+<!-- Footer -->
+    <footer class="bg-neutral-900 pt-14 pb-6" style="max-height: 600px">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-10">
+          <!-- Brand -->
+          <div class="lg:col-span-2">
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-10 h-10 bg-secondary-400 rounded-small flex items-center justify-center"
+              >
+                <img
+                  src="https://www.google.com/s2/favicons?domain=su.ac.za&sz=256"
+                  alt="Stellenbosch University Icon"
+                  style="width: 24px; height: 24px; vertical-align: middle"
+                />
+              </div>
+              <div>
                 <div
                   class="font-heading text-neutral-50 text-base font-semibold leading-tight"
                 >
@@ -776,7 +901,5 @@
       </div>
     </footer>
 </div>
-
-
-
+    <script src="js/homepage.js"></script>
 </body></html>
