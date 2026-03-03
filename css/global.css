@@ -1,0 +1,290 @@
+/* Consolidated global styles extracted from HTML files */
+
+:root {
+  --font-heading-name: 'Playfair Display';
+  --font-body-name: 'Inter';
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --letter-spacing-heading: -0.25px;
+  --letter-spacing-body: 0px;
+  --space-base: 1rem;
+  --radius-small: 4px;
+  --radius-large: 8px;
+  --border-width: 1px;
+  --shadow-color: 10 26 54;
+  --shadow-offset-x: 0px;
+  --shadow-offset-y: 4px;
+  --shadow-blur: 16px;
+  --shadow-spread: 0px;
+  --shadow-opacity: 0.12;
+  --shadow-custom: 0px 4px 16px 0px rgba(10, 26, 54, 0.12);
+  --shadow-custom-hover: 0px 8px 28px 0px rgba(10, 26, 54, 0.2);
+}
+
+/* Utility / Navigation */
+.dropdown:hover .dropdown-menu { display: block; }
+.nav-link-hover:hover { color: #fbc352; }
+
+/* Hero & Overlays */
+.hero-overlay { background: linear-gradient(135deg, rgba(10, 26, 54, 0.82) 0%, rgba(30, 58, 110, 0.65) 60%, rgba(30, 58, 110, 0.3) 100%); }
+.page-hero-overlay { background: linear-gradient(135deg, rgba(10, 26, 54, 0.90) 0%, rgba(30, 58, 110, 0.75) 60%, rgba(30, 58, 110, 0.4) 100%); }
+
+/* Cards */
+.card-hover:hover { transform: translateY(-3px); box-shadow: var(--shadow-custom-hover); }
+.card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.research-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-custom-hover); }
+.research-card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+
+/* Tags & Staff */
+.theme-tag { display: inline-flex; align-items: center; gap: 4px; }
+.staff-card:hover { border-color: #5a7ab8; box-shadow: var(--shadow-custom-hover); }
+.staff-card { transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+.filter-btn.active { background-color: #1e3a6e; color: #f8f9fa; border-color: #1e3a6e; }
+
+/* Timeline */
+.timeline-line::before {
+  content: '';
+  position: absolute;
+  left: 19px;
+  top: 32px;
+  bottom: 0;
+  width: 2px;
+  background: #e9ecef;
+}
+
+/* Tabs */
+.tab-active { border-bottom: 3px solid #fab52e; color: #0a1a36; font-weight: 600; }
+.tab-inactive { border-bottom: 3px solid transparent; color: #6c757d; }
+.tab-inactive:hover { color: #1e3a6e; border-bottom-color: #c5d0e6; }
+.prog-tab-content { display: none; }
+.prog-tab-content.active { display: block; }
+
+/* Sticky / Sidebars */
+.sticky-sidebar { position: sticky; top: 80px; }
+
+/* Supervisor / Module Cards */
+.supervisor-card:hover { border-color: #5a7ab8; box-shadow: var(--shadow-custom-hover); }
+.supervisor-card { transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+.module-tag { transition: background-color 0.15s ease; }
+
+/* Accordion */
+.accordion-content { display: none; }
+.accordion-content.open { display: block; }
+.accordion-icon { transition: transform 0.2s ease; }
+.accordion-icon.open { transform: rotate(180deg); }
+
+/* Small helpers */
+.shadow-custom { box-shadow: var(--shadow-custom); }
+.rounded-small { border-radius: var(--radius-small); }
+.rounded-large { border-radius: var(--radius-large); }
+
+/* Mobile navigation toggling */
+#main-nav {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#main-nav.flex {
+  display: flex;
+}
+@media (min-width: 1024px) {
+  #main-nav {
+    display: flex !important;
+    flex-direction: row;
+  }
+}
+
+/* Dropdowns: allow click-to-open via JavaScript */
+.dropdown.open .dropdown-menu {
+  display: block !important;
+}
+
+/* End of consolidated styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #FDB813; /* SU gold style */
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 40px 20px 20px;
+}
+
+.staff-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  padding: 0 20px 40px;
+}
+
+.staff-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.staff-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+
+.staff-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.staff-role {
+  color: #0066cc;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.staff-info {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Alumni & related page specific styles */
+.alumni-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.alumni-card {
+  flex: 1 1 250px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: 0.2s ease;
+  font-weight: 500;
+}
+
+.alumni-card:hover {
+  transform: translateY(-3px);
+}
+
+select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  background-color: #FDB813;
+  border: 1px solid #420303;
+  font-size: 14px;
+  text-align: left;
+}
+
+.year-select {
+    margin-left: 5px;
+    margin-bottom: 5px
+}
+
+.year-content {
+  display: none;
+  padding: 10px 0 10px 15px;
+}
+
+.section-title {
+        font-size: 18px;
+  font-weight: bold;
+  margin: 40px 20px 20px;
+}
+
+.section{
+  font-size: 28px;
+  font-weight: bold;
+  margin: 40px 20px 20px;
+}
+
+.student-card {
+    background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+.student-card a:hover {
+    text-decoration: underline;
+}
+.student-name {
+    font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.student-research {
+    margin-top: 10px;
+  font-size: 14px;
+  color: #444;
+}
+.students-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.research-link{
+    color:#5a7ab8;
+}

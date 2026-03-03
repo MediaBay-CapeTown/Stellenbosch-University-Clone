@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Postgraduate - Computer Science</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <script src="js/homepage.js"></script>
+  <script src="js/global.js"></script>
+  <link rel="stylesheet" href="css/global.css" />
+</head>
+<body class="bg-neutral-100  text-slate-900 ">
+
+<!-- Styled Header for Postgraduate Page (Maroon Background) -->
+<!-- Sticky Header -->
+    <header class="sticky top-0 z-50 bg-[#420303] shadow-custom">
+
+
+      <!-- Main nav -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <a href="homepage.html" class="flex items-center gap-3 flex-shrink-0">
+            <div
+              class="w-10 h-10 bg-secondary-400 rounded-small flex items-center justify-center"
+            >
+              <img
+                src="https://www.google.com/s2/favicons?domain=su.ac.za&sz=256"
+                alt="Stellenbosch University Icon"
+                style="width: 24px; height: 24px; vertical-align: middle"
+              />
+            </div>
+            <div class="hidden sm:block">
+              <div
+                class="font-heading text-neutral-50 text-lg sm:text-xl lg:text-2xl font-semibold leading-tight"
+                data-key="brandNameShort"
+              >
+                Stellenbosch
+              </div>
+              <div
+                class="text-secondary-300 text-xs font-medium tracking-widest uppercase"
+                data-key="brandUniversity"
+              >
+                University
+              </div>
+            </div>
+          </a>
+
+          <!-- Nav links -->
+          <nav class="hidden lg:flex items-center gap-1">
+            <!-- Academics dropdown -->
+            <div class="dropdown relative">
+              <button
+                class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors flex items-center gap-1"
+              >
+                <span data-key="navAcademics">Academics</span>
+                <svg
+                  class="w-3.5 h-3.5 text-neutral-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div
+                class="dropdown-menu hidden absolute top-full left-0 w-52 bg-white rounded-large shadow-custom-hover border border-neutral-200 py-1 z-50"
+              >
+                <a
+                  href="undergraduate.html"
+                  class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                  data-key="navUndergraduate"
+                  >Undergraduate</a
+                >
+                <a
+                  href="postgraduate.html"
+                  class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                  data-key="navPostgraduate"
+                  >Postgraduate</a
+                >
+                <a
+                  href="research.html"
+                  class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                  data-key="navResearch"
+                  >Research</a
+                >
+              </div>
+            </div>
+            
+              <div class="dropdown relative">
+              <button
+                class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors flex items-center gap-1"
+              >
+                <span data-key="navPeople">People</span>
+                <svg
+                  class="w-3.5 h-3.5 text-neutral-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div
+                class="dropdown-menu hidden absolute top-full left-0 w-52 bg-white rounded-large shadow-custom-hover border border-neutral-200 py-1 z-50"
+              >
+                <a
+                  href="staff-page.html"
+                  class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                  data-key="navStaff"
+                  >Staff</a
+                >
+                <a
+                href="student-page.html"
+                class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                data-key="navStudents"
+                >Students</a
+              >
+                <a
+                  href="alumni-page.html"
+                  class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                  data-key="navAlumni"
+                  >Alumni</a
+                >
+              </div>
+            </div>
+            <div class="dropdown relative">
+              <button
+                class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors flex items-center gap-1"
+              >
+                <span data-key="navLinks">Links</span>
+                <svg
+                  class="w-3.5 h-3.5 text-neutral-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div
+                class="dropdown-menu hidden absolute top-full left-0 w-52 bg-white rounded-large shadow-custom-hover border border-neutral-200 py-1 z-50"
+              >
+                <a
+                  href="https://www.su.ac.za/en"
+                  class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                  data-key="navStellenboschUniversity"
+                  >Stellenbosch University</a
+                >
+                <a
+                  href="https://www.su.ac.za/en/faculties/science"
+                  class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                  data-key="navScienceFaculty"
+                  >Science Faculty</a
+                >
+                <a
+                href="https://www.su.ac.za/en/apply/pg-studies/mathematical-sciences"
+                class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                data-key="navMathematicalSciences"
+                >Mathematical Sciences</a
+              >
+                <a
+                href="https://www.cs.sun.ac.za/iacs/"
+                class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                data-key="navInstituteOfAppliedCS"
+                >Institute of Applied CS</a
+              >
+                <a
+                href="https://group.telkom.co.za/governance/management-team.html"
+                class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                data-key="navTelkomNSNCEO"
+                >Telkom-NSN CEO</a
+              >
+              </div>
+            </div>
+            <a
+              href="contact-page.html"
+              class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors"
+              data-key="navContact"
+              >Contact</a
+            >
+            
+          </nav>
+
+          <!-- CTA Buttons -->
+           
+          <div class="hidden lg:flex items-center gap-2">
+            <a
+              href="undergraduate.html"
+              class="bg-secondary-400 hover:bg-secondary-300 text-primary-900 text-sm font-semibold px-4 py-2 rounded-small transition-colors"
+              data-key="ctaApplyNow"
+              >Apply Now</a
+            >
+
+          </div>
+          <div class="flex items-center gap-2 text-white text-sm font-semibold">
+            <span data-key="labelEn">EN</span>
+          
+            <label class="switch">
+              <input type="checkbox" id="languageToggle">
+              <span class="slider round"></span>
+            </label>
+          
+            <span data-key="labelAf">AF</span>
+          </div>
+          
+        </div>
+      </div>
+    </header>
+
+ <!-- Floating Back Button -->
+<a href="code.html" 
+   class="fixed top-6 right-6 z-50 inline-flex items-center px-4 py-2 text-white rounded-lg shadow-lg hover:opacity-90 transition"
+   style="background-color: #663447;">
+  <span class="material-symbols-outlined mr-2">arrow_back</span>
+  Back to Home
+</a>
+
+ <main class="py-14">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="mt-16 pt-12 border-t border-neutral-300">
+      <h2 class="font-heading text-2xl font-bold text-neutral-900 mb-8">
+        Postgraduate Modules
+      </h2>
+
+<h2 class="font-heading text-2xl font-bold text-neutral-900 mb-6">
+   Programmes
+</h2>
+
+<div class="overflow-x-auto mb-12">
+  <table class="w-full border-collapse">
+    <thead>
+<tr class="bg-[#683242] text-white">        
+        <th class="border border-neutral-300 px-4 py-3 text-left text-sm font-semibold">Code</th>
+        <th class="border border-neutral-300 px-4 py-3 text-left text-sm font-semibold">Programme</th>
+        <th class="border border-neutral-300 px-4 py-3 text-left text-sm font-semibold">Description</th>
+        <th class="border border-neutral-300 px-4 py-3 text-left text-sm font-semibold">Details / Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="bg-white hover:bg-blue-50 transition-colors">
+        <td class="border border-neutral-300 px-4 py-3 text-sm font-semibold text-primary-700">18139-797</td>
+        <td class="border border-neutral-300 px-4 py-3 text-sm font-semibold">Honours in Computer Science</td>
+        <td class="border border-neutral-300 px-4 py-3 text-sm text-neutral-700">
+          Stream Computer Science. This stream consists of 6 modules of 16 credits each, as well as a compulsory programming project of 32 credits. At most two modules may be taken from related departments with the permission of the Computer Science Department. Not all modules are necessarily offered each year.
+        </td>
+        <td class="border border-neutral-300 px-4 py-3 text-sm">
+          <a href="https://cs.sun.ac.za/teaching/honours/" target="_blank" class="text-primary hover:underline">View Honours Programme Details</a>
+        </td>
+      </tr>
+
+      <tr class="bg-neutral-50 hover:bg-blue-50 transition-colors">
+        <td class="border border-neutral-300 px-4 py-3 text-sm font-semibold text-primary-700">18139-878</td>
+        <td class="border border-neutral-300 px-4 py-3 text-sm font-semibold">Masters in Computer Science</td>
+        <td class="border border-neutral-300 px-4 py-3 text-sm text-neutral-700">
+          Independent research on an approved topic as determined by the supervisor(s) and leading to a thesis is required.
+        </td>
+        <td class="border border-neutral-300 px-4 py-3 text-sm">
+          <a href="https://cs.sun.ac.za/teaching/masters/" target="_blank" class="text-primary hover:underline">View Masters Programme Details</a>
+        </td>
+      </tr>
+
+      <tr class="bg-white hover:bg-blue-50 transition-colors">
+        <td class="border border-neutral-300 px-4 py-3 text-sm font-semibold text-primary-700">18139-978</td>
+        <td class="border border-neutral-300 px-4 py-3 text-sm font-semibold">PhD in Computer Science</td>
+        <td class="border border-neutral-300 px-4 py-3 text-sm text-neutral-700">
+          A dissertation containing the results of your independent research is required.
+        </td>
+        <td class="border border-neutral-300 px-4 py-3 text-sm">
+          <a href="https://cs.sun.ac.za/teaching/phd/" target="_blank" class="text-primary hover:underline">View PhD Programme Details</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+
+
+      <h3 class="font-bold text-xl mt-8">Year Module</h3>
+<ul class="list-disc list-inside space-y-2">
+  <li>
+    <strong>
+      <a href="https://www.cs.sun.ac.za/courses/cs771/" target="_blank" class="text-maroon underline">
+        63444-771 Honours Project in Computer Science
+      </a>
+    </strong>
+    (1st & 2nd Semester)<br>
+    Large software construction or research problem under supervision.
+  </li>
+</ul>
+
+
+<h3 class="font-heading text-lg font-bold text-neutral-900 mt-8 mb-4">
+  First Semester Modules
+</h3>
+<div class="overflow-x-auto mb-12">
+  <table class="w-full border-collapse">
+    <thead>
+<tr class="bg-[#683242] text-white">
+        <th class="border border-neutral-300 px-4 py-3 text-left text-sm font-semibold">Code</th>
+        <th class="border border-neutral-300 px-4 py-3 text-left text-sm font-semibold">Module Name</th>
+        <th class="border border-neutral-300 px-4 py-3 text-left text-sm font-semibold">Lecturer</th>
+        <th class="border border-neutral-300 px-4 py-3 text-left text-sm font-semibold">Link</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr class="bg-white hover:bg-blue-50 transition-colors">
+        <td class="border px-4 py-3 text-sm font-semibold text-primary-700">64947‑712</td>
+        <td class="border px-4 py-3 text-sm font-semibold">Advanced Algorithms</td>
+        <td class="border px-4 py-3 text-sm">Willem Bester</td>
+        <td class="border px‑4 py‑3 text-sm">
+          <a href="https://www.cs.sun.ac.za/courses/cs712/" target="_blank" class="text-primary hover:underline">Course Page</a>
+        </td>
+      </tr>
+
+      <tr class="bg-neutral-50 hover:bg-blue-50 transition-colors">
+        <td class="border px-4 py-3 text-sm font-semibold text-primary-700">64971‑716</td>
+        <td class="border px-4 py-3 text-sm font-semibold">Adv. Topics I − Vulnerability Discovery & Exploitation</td>
+        <td class="border px-4 py-3 text-sm">Fabian Yamaguchi</td>
+        <td class="border px‑4 py‑3 text-sm">
+          <a href="https://www.cs.sun.ac.za/courses/cs716/" target="_blank" class="text-primary hover:underline">Course Page</a>
+        </td>
+      </tr>
+
+      <tr class="bg-white hover:bg-blue-50 transition-colors">
+        <td class="border px-4 py-3 text-sm font-semibold text-primary-700">65048‑746</td>
+        <td class="border px-4 py-3 text-sm font-semibold">Adv. Topics II − Ontology Engineering</td>
+        <td class="border px-4 py-3 text-sm">Maria Keet</td>
+        <td class="border px‑4 py‑3 text-sm">
+          <a href="https://www.cs.sun.ac.za/courses/cs746/" target="_blank" class="text-primary hover:underline">Course Page</a>
+        </td>
+      </tr>
+
+      <tr class="bg-neutral-50 hover:bg-blue-50 transition-colors">
+        <td class="border px-4 py-3 text-sm font-semibold text-primary-700">14533‑771</td>
+        <td class="border px-4 py-3 text-sm font-semibold">Computing and Society</td>
+        <td class="border px-4 py-3 text-sm">William Tucker</td>
+        <td class="border px‑4 py‑3 text-sm">
+          <a href="https://www.cs.sun.ac.za/courses/cs771soc/" target="_blank" class="text-primary hover:underline">Course Page</a>
+        </td>
+      </tr>
+
+      <tr class="bg-white hover:bg-blue-50 transition-colors">
+        <td class="border px-4 py-3 text-sm font-semibold text-primary-700">14232‑791</td>
+        <td class="border px-4 py-3 text-sm font-semibold">Artificial Intelligence</td>
+        <td class="border px-4 py-3 text-sm">Andries Engelbrecht</td>
+        <td class="border px‑4 py‑3 text-sm">
+          <a href="https://www.cs.sun.ac.za/courses/cs791ai/" target="_blank" class="text-primary hover:underline">Course Page</a>
+        </td>
+      </tr>
+
+      <tr class="bg-neutral-50 hover:bg-blue-50 transition-colors">
+        <td class="border px-4 py-3 text-sm font-semibold text-primary-700">13944‑795</td>
+        <td class="border px-4 py-3 text-sm font-semibold">Functional Programming</td>
+        <td class="border px-4 py-3 text-sm">Brink van der Merwe</td>
+        <td class="border px‑4 py‑3 text-sm">
+          <a href="https://www.cs.sun.ac.za/courses/cs795fp/" target="_blank" class="text-primary hover:underline">Course Page</a>
+        </td>
+      </tr>
+
+      <tr class="bg-white hover:bg-blue-50 transition-colors">
+        <td class="border px-4 py-3 text-sm font-semibold text-primary-700">14195‑742</td>
+        <td class="border px-4 py-3 text-sm font-semibold">Machine Learning A</td>
+        <td class="border px-4 py-3 text-sm">Steve Kroon</td>
+        <td class="border px‑4 py‑3 text-sm">
+          <a href="https://www.cs.sun.ac.za/courses/cs742mla/" target="_blank" class="text-primary hover:underline">Course Page</a>
+        </td>
+      </tr>
+
+      <tr class="bg-neutral-50 hover:bg-blue-50 transition-colors">
+        <td class="border px-4 py-3 text-sm font-semibold text-primary-700">14530‑711</td>
+        <td class="border px-4 py-3 text-sm font-semibold">Computer Networks</td>
+        <td class="border px-4 py-3 text-sm">William Tucker</td>
+        <td class="border px‑4 py‑3 text-sm">
+          <a href="https://www.cs.sun.ac.za/courses/cs711cn/" target="_blank" class="text-primary hover:underline">Course Page</a>
+        </td>
+      </tr>
+
+      <tr class="bg-white hover:bg-blue-50 transition-colors">
+        <td class="border px-4 py-3 text-sm font-semibold text-primary-700">64963‑714</td>
+        <td class="border px-4 py-3 text-sm font-semibold">Concurrent Programming I</td>
+        <td class="border px-4 py-3 text-sm">Cornelia Inggs</td>
+        <td class="border px‑4 py‑3 text-sm">
+          <a href="https://www.cs.sun.ac.za/courses/cs714cpi/" target="_blank" class="text-primary hover:underline">Course Page</a>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+<h3 class="font-heading text-lg font-bold text-neutral-900 mt-8 mb-4">
+  Second Semester Modules
+</h3>
+<div class="overflow-x-auto mb-12">
+  <table class="w-full border-collapse">
+    <thead>
+<tr class="bg-[#683242] text-white">
+        <th class="border border-neutral-300 px-4 py-3 text-left text-sm font-semibold">Code</th>
+        <th class="border border-neutral-300 px-4 py-3 text-left text-sm font-semibold">Module Name</th>
+        <th class="border border-neutral-300 px-4 py-3 text-left text-sm font-semibold">Lecturer</th>
+        <th class="border border-neutral-300 px-4 py-3 text-left text-sm font-semibold">Link</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr class="bg-white hover:bg-blue-50 transition-colors">
+        <td class="border px-4 py-3 text-sm font-semibold text-primary-700">11788‑741</td>
+        <td class="border px-4 py-3 text-sm font-semibold">Machine Learning</td>
+        <td class="border px-4 py-3 text-sm">Andries Engelbrecht</td>
+        <td class="border px‑4 py‑3 text-sm">
+          <a href="https://www.cs.sun.ac.za/courses/cs741/" target="_blank" class="text-primary hover:underline">Course Page</a>
+        </td>
+      </tr>
+
+      <tr class="bg-neutral-50 hover:bg-blue-50 transition-colors">
+        <td class="border px-4 py-3 text-sm font-semibold text-primary-700">65021‑745</td>
+        <td class="border px-4 py-3 text-sm font-semibold">Software Construction ‑ Compilers</td>
+        <td class="border px-4 py-3 text-sm">Bernd Fischer</td>
+        <td class="border px‑4 py‑3 text-sm">
+          <a href="https://www.cs.sun.ac.za/courses/cs745/" target="_blank" class="text-primary hover:underline">Course Page</a>
+        </td>
+      </tr>
+
+      <tr class="bg-white hover:bg-blue-50 transition-colors">
+        <td class="border px-4 py-3 text-sm font-semibold text-primary-700">14531‑771</td>
+        <td class="border px-4 py-3 text-sm font-semibold">Principles of Data Science</td>
+        <td class="border px-4 py-3 text-sm">Marcel Dunaiski</td>
+        <td class="border px‑4 py‑3 text-sm">
+          <a href="https://www.cs.sun.ac.za/courses/cs771pds/" target="_blank" class="text-primary hover:underline">Course Page</a>
+        </td>
+      </tr>
+
+      <tr class="bg-neutral-50 hover:bg-blue-50 transition-colors">
+        <td class="border px-4 py-3 text-sm font-semibold text-primary-700">14066‑791</td>
+        <td class="border px-4 py-3 text-sm font-semibold">Space Science Algorithms</td>
+        <td class="border px-4 py-3 text-sm">Trienko Grobler</td>
+        <td class="border px‑4 py‑3 text-sm">
+          <a href="https://www.cs.sun.ac.za/courses/cs791ssa/" target="_blank" class="text-primary hover:underline">Course Page</a>
+        </td>
+      </tr>
+
+      <tr class="bg-white hover:bg-blue-50 transition-colors">
+        <td class="border px-4 py-3 text-sm font-semibold text-primary-700">Machine Learning & AI I</td>
+        <td class="border px-4 py-3 text-sm font-semibold">Machine Learning &amp; AI I – Cognitive Robotics</td>
+        <td class="border px-4 py-3 text-sm">Gavin Rens</td>
+        <td class="border px‑4 py‑3 text-sm">
+          <a href="https://www.cs.sun.ac.za/courses/csai-cogrob/" target="_blank" class="text-primary hover:underline">Course Page</a>
+        </td>
+      </tr>
+
+      <tr class="bg-neutral-50 hover:bg-blue-50 transition-colors">
+        <td class="border px-4 py-3 text-sm font-semibold text-primary-700">14065‑796</td>
+        <td class="border px-4 py-3 text-sm font-semibold">Software Testing and Analysis</td>
+        <td class="border px-4 py-3 text-sm">Cornelia Inggs, Bernd Fischer, Willem Visser</td>
+        <td class="border px‑4 py‑3 text-sm">
+          <a href="https://www.cs.sun.ac.za/courses/cs796sta/" target="_blank" class="text-primary hover:underline">Course Page</a>
+        </td>
+      </tr>
+
+      <tr class="bg-white hover:bg-blue-50 transition-colors">
+        <td class="border px-4 py-3 text-sm font-semibold text-primary-700">63452‑711</td>
+        <td class="border px-4 py-3 text-sm font-semibold">Automata Theory &amp; Applications</td>
+        <td class="border px-4 py-3 text-sm">Brink van der Merwe</td>
+        <td class="border px‑4 py‑3 text-sm">
+          <a href="https://www.cs.sun.ac.za/courses/cs711ata/" target="_blank" class="text-primary hover:underline">Course Page</a>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+      <!-- ================= HONOURS ================= -->
+
+      <h3 class="font-heading text-xl font-bold text-neutral-900 mb-4">
+        BSc Honours in Computer Science
+      </h3>
+
+      <div class="mb-8 text-sm text-neutral-700 max-w-4xl space-y-2">
+        <p><strong>NQF Level:</strong> 8</p>
+        <p><strong>Duration:</strong> 1 year (full-time)</p>
+        <p><strong>Total Credits:</strong> 128</p>
+        <p><strong>Admission Requirements:</strong> A Bachelor’s degree in Computer Science or related field with an average of at least 60% in final-year Computer Science modules.</p>
+      </div>
+
+      <p class="text-sm text-neutral-700 mb-6 max-w-4xl">
+        The Honours programme provides advanced theoretical and practical
+        knowledge in specialised areas of Computer Science. Students complete
+        six coursework modules (16 credits each) and a 32-credit programming
+        research project.
+      </p>
+
+      <h4 class="font-heading text-lg font-bold text-neutral-900 mt-8 mb-4">
+        Honours Modules (16 credits each unless stated)
+      </h4>
+
+      <div class="overflow-x-auto mb-12">
+        <table class="w-full border-collapse">
+          <thead>
+<tr class="bg-[#683242] text-white">
+             <th class="border border-neutral-300 px-4 py-3 text-left text-sm font-semibold">Code</th>
+              <th class="border border-neutral-300 px-4 py-3 text-left text-sm font-semibold">Module Name</th>
+              <th class="border border-neutral-300 px-4 py-3 text-left text-sm font-semibold">Semester</th>
+              <th class="border border-neutral-300 px-4 py-3 text-left text-sm font-semibold">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr class="bg-white hover:bg-blue-50 transition-colors">
+              <td class="border px-4 py-3 text-sm font-semibold text-primary-700">64947-712</td>
+              <td class="border px-4 py-3 text-sm font-semibold">Advanced Algorithms</td>
+              <td class="border px-4 py-3 text-sm">1st</td>
+              <td class="border px-4 py-3 text-sm text-neutral-700">
+                Advanced design and analysis of algorithms, complexity theory,
+                approximation algorithms and optimisation techniques.
+              </td>
+            </tr>
+
+            <tr class="bg-neutral-50 hover:bg-blue-50 transition-colors">
+              <td class="border px-4 py-3 text-sm font-semibold text-primary-700">64971-716</td>
+              <td class="border px-4 py-3 text-sm font-semibold">Vulnerability Discovery & Exploitation</td>
+              <td class="border px-4 py-3 text-sm">1st</td>
+              <td class="border px-4 py-3 text-sm text-neutral-700">
+                Techniques for discovering software vulnerabilities and
+                implementing defensive cybersecurity strategies.
+              </td>
+            </tr>
+
+            <tr class="bg-white hover:bg-blue-50 transition-colors">
+              <td class="border px-4 py-3 text-sm font-semibold text-primary-700">63444-771</td>
+              <td class="border px-4 py-3 text-sm font-semibold">Honours Programming Project (32 credits)</td>
+              <td class="border px-4 py-3 text-sm">Year</td>
+              <td class="border px-4 py-3 text-sm text-neutral-700">
+                Independent supervised research project including literature
+                review, implementation, evaluation and final dissertation.
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <h4 class="font-heading text-lg font-bold text-neutral-900 mb-4">
+        Research Areas
+      </h4>
+
+      <ul class="list-disc list-inside text-sm text-neutral-700 mb-16 space-y-2">
+        <li>Artificial Intelligence & Machine Learning</li>
+        <li>Cybersecurity</li>
+        <li>Data Science & Big Data</li>
+        <li>Software Engineering</li>
+        <li>Distributed Systems</li>
+        <li>Computer Networks</li>
+      </ul>
+
+
+      <!-- ================= MASTERS ================= -->
+
+      <h3 class="font-heading text-xl font-bold text-neutral-900 mb-4">
+        MSc in Computer Science
+      </h3>
+
+      <div class="mb-8 text-sm text-neutral-700 max-w-4xl space-y-2">
+        <p><strong>NQF Level:</strong> 9</p>
+        <p><strong>Duration:</strong> 1–2 years</p>
+        <p><strong>Total Credits:</strong> 180</p>
+        <p><strong>Admission Requirements:</strong> BSc Honours in Computer Science with at least 65% average.</p>
+      </div>
+
+      <p class="text-sm text-neutral-700 mb-12 max-w-4xl">
+        The MSc programme is research-based. Students complete an approved
+        research proposal and produce a full dissertation under supervision.
+        Assessment is based on dissertation examination and oral defence.
+      </p>
+
+
+      <!-- ================= PHD ================= -->
+
+      <h3 class="font-heading text-xl font-bold text-neutral-900 mb-4">
+        PhD in Computer Science
+      </h3>
+
+      <div class="mb-8 text-sm text-neutral-700 max-w-4xl space-y-2">
+        <p><strong>NQF Level:</strong> 10</p>
+        <p><strong>Duration:</strong> 3–4 years</p>
+        <p><strong>Total Credits:</strong> 360</p>
+        <p><strong>Admission Requirements:</strong> MSc in Computer Science or equivalent qualification.</p>
+      </div>
+
+      <p class="text-sm text-neutral-700 max-w-4xl">
+        The PhD programme requires the completion of original and
+        publishable research contributing new knowledge to the field.
+        Candidates must submit and defend a doctoral dissertation.
+      </p>
+
+    </div>
+  </div>
+</main>
+
+
+</body>
+</html>

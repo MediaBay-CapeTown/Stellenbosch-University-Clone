@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>School of Computer Science | Leading Innovation in Tech</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#961e12",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#211211"
+                    },
+                    fontFamily: {
+                        display: "Inter"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        lg: "1rem",
+                        xl: "1.5rem",
+                        full: "9999px"
+                    }
+
+                    
+                }
+            }
+        };
+    </script>
+
+      <title>SU - Stellenbosch University Homepage</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://www.google.com/s2/favicons?domain=su.ac.za&sz=256"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://www.google.com/s2/favicons?domain=su.ac.za&sz=256"
+    />
+   
+    <meta name="author" content="Zeus Chokoe, Zaid, Imtiyaaz" />
+    
+    <link
+      id="heading-font-link"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      id="body-font-link"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/homepage.js"></script>
+    <script src="js/global.js"></script>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/homepage.css" />
+
+
+
+
+  </head>
+
+<body class="bg-background-light  font-display text-slate-900  transition-colors duration-300">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden">
+ <!-- Sticky Header -->
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-50 bg-[#420303] shadow-custom">
+
+
+      <!-- Main nav -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <a href="homepage.html" class="flex items-center gap-3 flex-shrink-0">
+            <div
+              class="w-10 h-10 bg-secondary-400 rounded-small flex items-center justify-center"
+            >
+              <img
+                src="https://www.google.com/s2/favicons?domain=su.ac.za&sz=256"
+                alt="Stellenbosch University Icon"
+                style="width: 24px; height: 24px; vertical-align: middle"
+              />
+            </div>
+            <div class="hidden sm:block">
+              <div
+                class="font-heading text-neutral-50 text-lg sm:text-xl lg:text-2xl font-semibold leading-tight"
+                data-key="brandNameShort"
+              >
+                Stellenbosch
+              </div>
+              <div
+                class="text-secondary-300 text-xs font-medium tracking-widest uppercase"
+                data-key="brandUniversity"
+              >
+                University
+              </div>
+            </div>
+          </a>
+
+          <!-- Nav links -->
+          <nav class="hidden lg:flex items-center gap-1">
+            <!-- Academics dropdown -->
+            <div class="dropdown relative">
+              <button
+                class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors flex items-center gap-1"
+              >
+                <span data-key="navAcademics">Academics</span>
+                <svg
+                  class="w-3.5 h-3.5 text-neutral-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div
+                class="dropdown-menu hidden absolute top-full left-0 w-52 bg-white rounded-large shadow-custom-hover border border-neutral-200 py-1 z-50"
+              >
+                <a
+                  href="undergraduate.html"
+                  class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                  data-key="navUndergraduate"
+                  >Undergraduate</a
+                >
+                <a
+                  href="postgraduate.html"
+                  class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                  data-key="navPostgraduate"
+                  >Postgraduate</a
+                >
+                <a
+                  href="research.html"
+                  class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                  data-key="navResearch"
+                  >Research</a
+                >
+              </div>
+            </div>
+            
+              <div class="dropdown relative">
+              <button
+                class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors flex items-center gap-1"
+              >
+                <span data-key="navPeople">People</span>
+                <svg
+                  class="w-3.5 h-3.5 text-neutral-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div
+                class="dropdown-menu hidden absolute top-full left-0 w-52 bg-white rounded-large shadow-custom-hover border border-neutral-200 py-1 z-50"
+              >
+                <a
+                  href="staff-page.html"
+                  class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                  data-key="navStaff"
+                  >Staff</a
+                >
+                <a
+                href="student-page.html"
+                class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                data-key="navStudents"
+                >Students</a
+              >
+                <a
+                  href="alumni-page.html"
+                  class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                  data-key="navAlumni"
+                  >Alumni</a
+                >
+              </div>
+            </div>
+            <div class="dropdown relative">
+              <button
+                class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors flex items-center gap-1"
+              >
+                <span data-key="navLinks">Links</span>
+                <svg
+                  class="w-3.5 h-3.5 text-neutral-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div
+                class="dropdown-menu hidden absolute top-full left-0 w-52 bg-white rounded-large shadow-custom-hover border border-neutral-200 py-1 z-50"
+              >
+                <a
+                  href="https://www.su.ac.za/en"
+                  class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                  data-key="navStellenboschUniversity"
+                  >Stellenbosch University</a
+                >
+                <a
+                  href="https://www.su.ac.za/en/faculties/science"
+                  class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                  data-key="navScienceFaculty"
+                  >Science Faculty</a
+                >
+                <a
+                href="https://www.su.ac.za/en/apply/pg-studies/mathematical-sciences"
+                class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                data-key="navMathematicalSciences"
+                >Mathematical Sciences</a
+              >
+                <a
+                href="https://www.cs.sun.ac.za/iacs/"
+                class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                data-key="navInstituteOfAppliedCS"
+                >Institute of Applied CS</a
+              >
+                <a
+                href="https://group.telkom.co.za/governance/management-team.html"
+                class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                data-key="navTelkomNSNCEO"
+                >Telkom-NSN CEO</a
+              >
+              </div>
+            </div>
+            <a
+              href="contact-page.html"
+              class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors"
+              data-key="navContact"
+              >Contact</a
+            >
+            
+          </nav>
+
+          <!-- CTA Buttons -->
+           
+          <div class="hidden lg:flex items-center gap-2">
+            <a
+              href="undergraduate.html"
+              class="bg-secondary-400 hover:bg-secondary-300 text-primary-900 text-sm font-semibold px-4 py-2 rounded-small transition-colors"
+              data-key="ctaApplyNow"
+              >Apply Now</a
+            >
+
+          </div>
+          <div class="flex items-center gap-2 text-white text-sm font-semibold">
+            <span data-key="labelEn">EN</span>
+          
+            <label class="switch">
+              <input type="checkbox" id="languageToggle">
+              <span class="slider round"></span>
+            </label>
+          
+            <span data-key="labelAf">AF</span>
+          </div>
+          
+        </div>
+      </div>
+    </header>
+<main class="flex-grow">
+<div class="min-h-[calc(100vh-80px)]">
+<div class="max-w-7xl mx-auto px-6 md:px-16 lg:px-24 py-12 lg:py-24">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+  <!-- LEFT SIDE (Faculty Content) -->
+  <div class="space-y-8 max-w-3xl">
+
+    <div class="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+      <span class="material-symbols-outlined text-sm">auto_stories</span> Academic Excellence
+    </div>
+
+    <h1 class="text-5xl md:text-7xl font-black leading-[1.1] tracking-tight">
+      Faculty of <span style="color: #800000;">Computer Science</span>
+    </h1>
+
+    <h2 class="text-3xl md:text-4xl font-bold">Welcome</h2>
+
+    <p class="text-lg md:text-xl text-slate-600 leading-relaxed">
+      The Department of Computer Science was founded in 1972...
+    </p>
+
+  </div>
+
+  <!-- RIGHT SIDE (Research Slider) -->
+  <div>
+    <div class="flex items-end justify-between mb-6">
+      <div>
+        <h2 class="text-2xl font-black">Research & Innovation</h2>
+        <p class="text-slate-500 text-sm">Pioneering studies making global impact.</p>
+      </div>
+    </div>
+
+    <!-- Horizontal Scroll Container -->
+    <div class="relative">
+      <div id="researchSlider"
+           class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4">
+
+        <!-- Card 1 -->
+        <div class="min-w-[280px] snap-start bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+          <div class="aspect-video bg-slate-300 rounded-xl mb-4"></div>
+          <h4 class="font-bold text-lg">AI & Ethics Lab</h4>
+          <p class="text-slate-500 text-sm">Machine Learning • Ethics</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="min-w-[280px] snap-start bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+          <div class="aspect-video bg-slate-400 rounded-xl mb-4"></div>
+          <h4 class="font-bold text-lg">Quantum Computing Hub</h4>
+          <p class="text-slate-500 text-sm">Future Tech • Innovation</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="min-w-[280px] snap-start bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+          <div class="aspect-video bg-slate-200 rounded-xl mb-4"></div>
+          <h4 class="font-bold text-lg">Robotics & Vision</h4>
+          <p class="text-slate-500 text-sm">Automation • AI Systems</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="mt-20">
+<h2 class="text-2xl font-bold mb-8">Academic Programs</h2>
+<a href="undergraduate.html">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"><div class="bg-white p-10 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-primary/50 transition-all group">
+<span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">school</span>
+<h3 class="text-xl font-bold mb-2">Undergraduate</h3>
+<p class="text-slate-500  text-sm">BSc programs in Computer Science, AI, and Software Engineering designed for industry readiness.</p>
+</div>
+</a>
+<a href="postgraduate.html">
+  <div class="bg-white  p-10 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-primary/50 transition-all group cursor-pointer">
+    <span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">history_edu</span>
+    <h3 class="text-xl font-bold mb-2">Postgraduate</h3>
+    <p class="text-slate-500  text-sm">Advanced MSc courses specializing in Cybersecurity, Data Science, and Robotics.</p>
+  </div>
+</a>
+
+<a href="postgraduate.html#honours"><div class="bg-white  p-10 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-primary/50 transition-all group">
+<span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">biotech</span>
+<h3 class="text-xl font-bold mb-2">Masters &amp; Research</h3>
+<p class="text-slate-500  text-sm">World-leading MPhil and PhD opportunities in our state-of-the-art research laboratories.</p>
+</div>
+</a>
+</div>
+</div>
+<div id = "contact" class="mt-24 bg-white rounded-3xl p-10 md:p-12 border border-slate-100 dark:border-slate-800 shadow-sm">
+  <div class="flex flex-col md:flex-row gap-12">
+    <div class="flex-1 space-y-4">
+      <h2 class="text-3xl font-black">Contact Details</h2>
+      <p class="text-slate-500 ">
+        Have questions? Our administrative team is here to assist you with any inquiries regarding the Computer Science Division, department facilities, or general support.
+      </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+
+        <!-- Phone -->
+        <div class="flex items-center gap-4">
+          <div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined text-xl">call</span>
+          </div>
+          <div>
+            <p class="text-xs font-bold text-slate-400 uppercase">Phone</p>
+            <p class="text-sm font-semibold">+27 21 808 4232</p>
+          </div>
+        </div>
+
+        <!-- Administrative Email -->
+        <div class="flex items-center gap-4">
+          <div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined text-xl">mail</span>
+          </div>
+          <div>
+            <p class="text-xs font-bold text-slate-400 uppercase">Administrative Email</p>
+            <p class="text-sm font-semibold">secretary@cs.sun.ac.za</p>
+          </div>
+        </div>
+
+        <!-- Postgraduate Email -->
+        <div class="flex items-center gap-4">
+          <div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined text-xl">mail</span>
+          </div>
+          <div>
+            <p class="text-xs font-bold text-slate-400 uppercase">Postgraduate Enquiries</p>
+            <p class="text-sm font-semibold">postgrad@cs.sun.ac.za</p>
+          </div>
+        </div>
+
+        <!-- Undergraduate Email -->
+        <div class="flex items-center gap-4">
+          <div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined text-xl">mail</span>
+          </div>
+          <div>
+            <p class="text-xs font-bold text-slate-400 uppercase">Undergraduate Enquiries</p>
+            <p class="text-sm font-semibold">undergrad@cs.sun.ac.za</p>
+          </div>
+        </div>
+
+      </div>
+      
+      <!-- Address -->
+      <div class="pt-6">
+        <p class="text-xs font-bold text-slate-400 uppercase">Address</p>
+        <p class="text-sm font-semibold">
+          Computer Science Division,<br>
+          Dept of Mathematical Sciences,<br>
+          Stellenbosch University<br>
+          Private Bag X1, 7602 Matieland, SOUTH AFRICA
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div>
+<div id="drawerOverlay"
+     class="fixed inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 z-40"></div>
+
+<aside id="rightDrawer"
+  class="fixed top-0 right-0 h-full w-80 bg-white  shadow-2xl
+         transform translate-x-full transition-transform duration-300 z-50
+         overflow-y-auto p-8 flex flex-col gap-10">
+
+         <div class="flex justify-end mb-4">
+  <button id="closeDrawer"
+    class="p-2 rounded hover:bg-slate-200 dark:hover:bg-slate-700">
+    <span class="material-symbols-outlined">close</span>
+  </button>
+</div>
+
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="size-14 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">contact_support</span>
+</div>
+<div>
+<h3 class="font-bold text-lg leading-tight">Prospective Student Help Desk</h3>
+<p class="text-xs text-slate-500 mt-1 uppercase font-bold tracking-wider">Enrollment Resource</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="p-4 rounded-xl bg-slate-50  border border-slate-100 dark:border-slate-700">
+<p class="text-[10px] font-black uppercase tracking-widest mb-2" style="color: #800000;">
+  Admissions Office
+</p><div class="space-y-2">
+<a class="flex items-center gap-3 text-sm font-medium hover:text-primary transition-colors" href="mailto:admissions@cs.uni.ac.uk">
+<span class="material-symbols-outlined text-lg text-slate-400">mail</span>
+                                        admissions@cs.uni.ac.uk
+                                    </a>
+<a class="flex items-center gap-3 text-sm font-medium hover:text-primary transition-colors" href="tel:+442012345678">
+<span class="material-symbols-outlined text-lg text-slate-400">call</span>
+                                        +44 (0) 20 1234 5678
+                                    </a>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-slate-50  border border-slate-100 dark:border-slate-700">
+<p class="text-[10px] font-black text-primary uppercase tracking-widest mb-2">Program Advising</p>
+<a class="flex items-center gap-3 text-sm font-medium hover:text-primary transition-colors" href="mailto:advisor@cs.uni.ac.uk">
+<span class="material-symbols-outlined text-lg text-slate-400">person_search</span>
+                                    advisor@cs.uni.ac.uk
+                                </a>
+</div>
+<a class="flex items-center justify-between p-4 rounded-xl bg-primary/5 hover:bg-primary/10 border border-primary/10 transition-all group" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">help</span>
+<span class="text-sm font-bold">View Applicant FAQs</span>
+</div>
+<span class="material-symbols-outlined text-primary text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2 px-3">Academic Portal</p>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl bg-primary text-white font-bold transition-all" href="#">
+<span class="material-symbols-outlined">how_to_reg</span> Admissions
+                        </a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 font-medium transition-all" href="#">
+<span class="material-symbols-outlined text-slate-400">groups</span> Faculty
+                        </a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 font-medium transition-all" href="#">
+<span class="material-symbols-outlined text-slate-400">diversity_3</span> Student Life
+                        </a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 font-medium transition-all" href="#">
+<span class="material-symbols-outlined text-slate-400">science</span> Research
+                        </a>
+</nav>
+<div class="mt-auto bg-slate-50  p-6 rounded-2xl space-y-4">
+<h4 class="font-bold">Visit Our Campus</h4>
+<p class="text-sm text-slate-500">Experience our labs and meet our faculty. Book an open day tour.</p>
+<button class="w-full bg-yellow-400 hover:bg-yellow-500  text-white py-3 rounded-lg font-bold text-sm">Book a Tour</button>
+</div>
+</aside>
+</div>
+</main>
+                <div
+                  class="font-heading text-neutral-50 text-base font-semibold leading-tight"
+                >
+                  Stellenbosch University
+                </div>
+              <div class="!text-black text-xs tracking-widest uppercase">
+  Est. 1918
+</div>
+              </div>
+            </div>
+            <p class="text-neutral-400 text-sm leading-relaxed mb-5 max-w-xs">
+              A leading African research university committed to excellence,
+              innovation, and inclusive education for a better world.
+            </p>
+            <div class="flex gap-3">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/stellenboschuniversity"
+                class="w-8 h-8 bg-primary-800 rounded-small flex items-center justify-center hover:bg-primary-700 transition-colors"
+              >
+                <svg
+                  class="w-4 h-4 text-neutral-300"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </a>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/school/stellenbosch-university/"
+                class="w-8 h-8 bg-primary-800 rounded-small flex items-center justify-center hover:bg-primary-700 transition-colors"
+              >
+                <svg
+                  class="w-4 h-4 text-neutral-300"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+              
+            </div>
+          </div>
+
+          <!-- Links -->
+          <div>
+            <h4
+              class="font-heading text-neutral-200 text-sm font-semibold mb-4 uppercase tracking-wide"
+            >
+              Academics
+            </h4>
+            <ul class="space-y-2.5">
+              <li>
+                <a
+                  href="undergraduate.html"
+                  class="text-neutral-400 text-sm hover:text-secondary-300 transition-colors"
+                  >Undergraduate</a
+                >
+              </li>
+              <li>
+                <a
+                  href="postgraduate.html"
+                  class="text-neutral-400 text-sm hover:text-secondary-300 transition-colors"
+                  >Postgraduate</a
+                >
+              </li>
+              <li>
+                <a
+                  href="research.html"
+                  class="text-neutral-400 text-sm hover:text-secondary-300 transition-colors"
+                  >Research</a
+                >
+              </li>
+              <li>
+                <a
+                  href="faculties.html"
+                  class="text-neutral-400 text-sm hover:text-secondary-300 transition-colors"
+                  >Faculties</a
+                >
+              </li>
+              <li>
+                <a
+                  href="short-courses.html"
+                  class="text-neutral-400 text-sm hover:text-secondary-300 transition-colors"
+                  >Short Courses</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="font-heading text-neutral-200 text-sm font-semibold mb-4 uppercase tracking-wide"
+            >
+              About SU
+            </h4>
+            <ul class="space-y-2.5">
+              <li>
+                <a
+                  href="about-page.html"
+                  class="text-neutral-400 text-sm hover:text-secondary-300 transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="people.html"
+                  class="text-neutral-400 text-sm hover:text-secondary-300 transition-colors"
+                  >People</a
+                >
+              </li>
+              <li>
+                <a
+                  href="news.html"
+                  class="text-neutral-400 text-sm hover:text-secondary-300 transition-colors"
+                  >News</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  href="http://www.campusmap.sun.ac.za"
+                  class="text-neutral-400 text-sm hover:text-secondary-300 transition-colors"
+                  >Campus Map</a
+                >
+              </li>
+              <li>
+                <a
+                  href="sustainability.html"
+                  class="text-neutral-400 text-sm hover:text-secondary-300 transition-colors"
+                  >Sustainability</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="font-heading text-neutral-200 text-sm font-semibold mb-4 uppercase tracking-wide"
+            >
+              Contact
+            </h4>
+            <ul class="space-y-2.5">
+              <li class="flex items-start gap-2">
+                <svg
+                  class="w-4 h-4 text-neutral-500 mt-0.5 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+                <span
+                  class="text-neutral-400 text-xs leading-relaxed"
+                  href="https://maps.google.com/?cid=14646205923334500851&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
+                  >Victoria St, Stellenbosch, 7600, South Africa</span
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  class="w-4 h-4 text-neutral-500 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+                <span class="text-neutral-400 text-xs">+27 61 729 8858</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  class="w-4 h-4 text-neutral-500 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+                <span class="text-neutral-400 text-xs">+27 21 808 9111</span>
+              </li>
+              
+              <li class="flex items-center gap-2">
+                <svg
+                  class="w-4 h-4 text-neutral-500 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+                <a
+                  href="mailto:info@sun.ac.za/webmail"
+                  class="text-neutral-400 text-xs hover:text-secondary-300 transition-colors"
+                  >info@sun.ac.za</a
+                >
+              </li>
+    
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer bottom -->
+        <div
+          class="border-t border-neutral-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3"
+        >
+          <p class="text-neutral-500 text-xs">
+            © 2026 Stellenbosch University & MediaBay. All rights reserved.
+          </p>
+          <div class="flex gap-4">
+            <a
+              href="privacy-policy.html"
+              class="text-neutral-500 text-xs hover:text-neutral-300 transition-colors"
+              >Privacy Policy</a
+            >
+            <a
+              href="terms-of-use.html"
+              class="text-neutral-500 text-xs hover:text-neutral-300 transition-colors"
+              >Terms of Use</a
+            >
+            <a
+              href="accessibility.html"
+              class="text-neutral-500 text-xs hover:text-neutral-300 transition-colors"
+              >Accessibility</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+</div>
+
+
+
+</body></html>
