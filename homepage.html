@@ -472,32 +472,63 @@ input:checked + .slider:before {
 
     <!-- Horizontal Scroll Container -->
     <div class="relative">
-      <div id="researchSlider"
-           class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4">
+  <div id="researchSlider"
+       class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4">
 
-        <!-- Card 1 -->
-        <div class="min-w-[280px] snap-start bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-          <div class="aspect-video bg-slate-300 rounded-xl mb-4"></div>
-          <h4 class="font-bold text-lg">AI & Ethics Lab</h4>
-          <p class="text-slate-500 text-sm">Machine Learning • Ethics</p>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="min-w-[280px] snap-start bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-          <div class="aspect-video bg-slate-400 rounded-xl mb-4"></div>
-          <h4 class="font-bold text-lg">Quantum Computing Hub</h4>
-          <p class="text-slate-500 text-sm">Future Tech • Innovation</p>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="min-w-[280px] snap-start bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-          <div class="aspect-video bg-slate-200 rounded-xl mb-4"></div>
-          <h4 class="font-bold text-lg">Robotics & Vision</h4>
-          <p class="text-slate-500 text-sm">Automation • AI Systems</p>
-        </div>
-
+    <!-- Card 1 -->
+    <div class="min-w-[280px] snap-start bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+      <div class="aspect-video bg-slate-50 rounded-xl mb-4 flex items-center justify-center">
+        <!-- AI SVG -->
+        <svg class="w-20 h-20 text-indigo-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06A1.65 1.65 0 0 0 15 19.4
+                   a1.65 1.65 0 0 0-1 .6 1.65 1.65 0 0 0-.33 1v.1a2 2 0 1 1-4 0v-.1a1.65 1.65 0 0 0-.33-1
+                   1.65 1.65 0 0 0-1-.6 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06
+                   A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-.6-1 1.65 1.65 0 0 0-1-.33h-.1a2 2 0 1 1 0-4h.1
+                   a1.65 1.65 0 0 0 1-.33 1.65 1.65 0 0 0 .6-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06
+                   a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6c.26 0 .52-.1.71-.29
+                   a1.65 1.65 0 0 0 .29-.71V3.5a2 2 0 1 1 4 0v.1c0 .26.1.52.29.71.19.19.45.29.71.29
+                   a1.65 1.65 0 0 0 1-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06
+                   A1.65 1.65 0 0 0 19.4 9c0 .26.1.52.29.71.19.19.45.29.71.29h.1a2 2 0 1 1 0 4h-.1
+                   a1.65 1.65 0 0 0-.71.29c-.19.19-.29.45-.29.71z"/>
+        </svg>
       </div>
+      <h4 class="font-bold text-lg">AI & Ethics Lab</h4>
+      <p class="text-slate-500 text-sm">Machine Learning • Ethics</p>
     </div>
+
+    <!-- Card 2 -->
+    <div class="min-w-[280px] snap-start bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+      <div class="aspect-video bg-slate-50 rounded-xl mb-4 flex items-center justify-center">
+        <!-- Quantum SVG -->
+        <svg class="w-20 h-20 text-purple-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="2"></circle>
+          <ellipse cx="12" cy="12" rx="9" ry="4"></ellipse>
+          <ellipse cx="12" cy="12" rx="4" ry="9"></ellipse>
+        </svg>
+      </div>
+      <h4 class="font-bold text-lg">Quantum Computing Hub</h4>
+      <p class="text-slate-500 text-sm">Future Tech • Innovation</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="min-w-[280px] snap-start bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+      <div class="aspect-video bg-slate-50 rounded-xl mb-4 flex items-center justify-center">
+        <!-- Robotics SVG -->
+        <svg class="w-20 h-20 text-emerald-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <rect x="6" y="8" width="12" height="8" rx="2"></rect>
+          <circle cx="9" cy="12" r="1"></circle>
+          <circle cx="15" cy="12" r="1"></circle>
+          <path stroke-linecap="round" d="M12 8V5m-3 0h6"></path>
+        </svg>
+      </div>
+      <h4 class="font-bold text-lg">Robotics & Vision</h4>
+      <p class="text-slate-500 text-sm">Automation • AI Systems</p>
+    </div>
+
+  </div>
+</div>
   </div>
 
 </div>
