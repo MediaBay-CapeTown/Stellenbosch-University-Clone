@@ -37,64 +37,6 @@ Cross-browser CSS resets and utilities
 
 Progressive enhancement principles
 
-📚 Content Pillars
-Academics
-
-Undergraduate programmes
-
-Postgraduate studies (Honours, Masters, PhD)
-
-Research groups and focus areas
-
-Programme guides and module breakdowns
-
-People
-
-Academic and administrative staff profiles
-
-Student highlights
-
-Alumni network
-
-Structured biographical tables with images
-
-Engagement
-
-Detailed contact centre (emails, phone numbers, postal & physical addresses)
-
-Embedded interactive Google Maps (JavaScript with iframe fallback)
-
-Departmental QR code access
-
-Office coordinates and navigation support
-
-News & Events
-
-Industry insights (Best Jobs 2024, 2025–2026 Computer Science trends)
-
-30+ annual events:
-
-Hackathons
-
-Workshops
-
-Research seminars
-
-Conferences
-
-Industry collaboration sessions
-
-Institutional
-
-About the Division
-
-Campus map
-
-Sustainability initiatives
-
-Accessibility compliance
-
-Legal and policy pages
 
 🎨 Design Language
 
