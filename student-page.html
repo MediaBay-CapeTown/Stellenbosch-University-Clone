@@ -19,12 +19,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       id="heading-font-link"
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link
       id="body-font-link"
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <script src="js/homepage.js"></script>
@@ -35,10 +35,10 @@
      /* Consolidated global styles extracted from HTML files */
 
 :root {
-  --font-heading-name: 'Raleway';
-  --font-body-name: 'Raleway';
-  --font-heading: 'Raleway', sans-serif;
-  --font-body: 'Raleway', sans-serif;
+  --font-heading-name: 'Playfair Display';
+  --font-body-name: 'Inter';
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
   --letter-spacing-heading: -0.25px;
   --letter-spacing-body: 0px;
   --space-base: 1rem;
@@ -212,7 +212,7 @@ input:checked + .slider:before {
 }
 
 .student-level {
-    color: #420303;
+    color: #0066cc;
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -243,8 +243,7 @@ input:checked + .slider:before {
 
   <body>
 
-    <!-- Sticky Header -->
-    <!-- Sticky Header -->
+    <<!-- Sticky Header -->
     <header class="sticky top-0 z-50 bg-[#420303] shadow-custom">
 
 
@@ -360,7 +359,7 @@ input:checked + .slider:before {
                   >Staff</a
                 >
                 <a
-                href="student-page.html"
+                href="students-page.html"
                 class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
                 data-key="navStudents"
                 >Students</a
@@ -885,6 +884,14 @@ input:checked + .slider:before {
         <ul class="space-y-2.5">
           <li>
             <a
+              href="about-page.html"
+              class="text-neutral-400 text-sm hover:text-secondary-300 transition-colors"
+              data-key="footerAboutUs"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
               href="people.html"
               class="text-neutral-400 text-sm hover:text-secondary-300 transition-colors"
               data-key="footerPeople"
@@ -1136,6 +1143,8 @@ input:checked + .slider:before {
 
           labelEn: "EN",
           labelAf: "AF",
+
+          navAbout: "About",
           navAcademics: "Academics",
           navPeople: "People",
           navNews: "News",
@@ -1168,6 +1177,7 @@ input:checked + .slider:before {
           footerShortCourses: "Short Courses",
 
           footerAboutHeading: "About SU",
+          footerAboutUs: "About Us",
           footerPeople: "People",
           footerNews: "News",
           footerCampusMap: "Campus Map",
@@ -1400,6 +1410,8 @@ input:checked + .slider:before {
 
           labelEn: "EN",
           labelAf: "AF",
+
+          navAbout: "Oor",
           navAcademics: "Akademies",
           navPeople: "Mense",
           navNews: "Nuus",
@@ -1431,6 +1443,7 @@ input:checked + .slider:before {
           footerShortCourses: "Kort Kursusse",
 
           footerAboutHeading: "Oor SU",
+          footerAboutUs: "Oor Ons",
           footerPeople: "Mense",
           footerNews: "Nuus",
           footerCampusMap: "Kampuskaart",

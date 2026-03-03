@@ -31,177 +31,15 @@
     <script src="js/global.js"></script>
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/prospective-students.css" />
-        <style>
-     /* Consolidated global styles extracted from HTML files */
-
-:root {
-  --font-heading-name: 'Raleway';
-  --font-body-name: 'Raleway';
-  --font-heading: 'Raleway', sans-serif;
-  --font-body: 'Raleway', sans-serif;
-  --letter-spacing-heading: -0.25px;
-  --letter-spacing-body: 0px;
-  --space-base: 1rem;
-  --radius-small: 4px;
-  --radius-large: 8px;
-  --border-width: 1px;
-  --shadow-color: 10 26 54;
-  --shadow-offset-x: 0px;
-  --shadow-offset-y: 4px;
-  --shadow-blur: 16px;
-  --shadow-spread: 0px;
-  --shadow-opacity: 0.12;
-  --shadow-custom: 0px 4px 16px 0px rgba(10, 26, 54, 0.12);
-  --shadow-custom-hover: 0px 8px 28px 0px rgba(10, 26, 54, 0.2);
-}
-:root {
-  --color-secondary-400: #e6a817;
-}
-
-.bg-secondary-400 {
-  background-color: var(--color-secondary-400);
-}
-/* Utility / Navigation */
-.dropdown:hover .dropdown-menu { display: block; }
-.nav-link-hover:hover { color: #fbc352; }
-
-/* Hero & Overlays */
-.hero-overlay { background: linear-gradient(135deg, rgba(10, 26, 54, 0.82) 0%, rgba(30, 58, 110, 0.65) 60%, rgba(30, 58, 110, 0.3) 100%); }
-.page-hero-overlay { background: linear-gradient(135deg, rgba(10, 26, 54, 0.90) 0%, rgba(30, 58, 110, 0.75) 60%, rgba(30, 58, 110, 0.4) 100%); }
-
-/* Cards */
-.card-hover:hover { transform: translateY(-3px); box-shadow: var(--shadow-custom-hover); }
-.card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
-.research-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-custom-hover); }
-.research-card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
-
-/* Tags & Staff */
-.theme-tag { display: inline-flex; align-items: center; gap: 4px; }
-.staff-card:hover { border-color: #5a7ab8; box-shadow: var(--shadow-custom-hover); }
-.staff-card { transition: border-color 0.2s ease, box-shadow 0.2s ease; }
-.filter-btn.active { background-color: #1e3a6e; color: #f8f9fa; border-color: #1e3a6e; }
-
-/* Timeline */
-.timeline-line::before {
-  content: '';
-  position: absolute;
-  left: 19px;
-  top: 32px;
-  bottom: 0;
-  width: 2px;
-  background: #e9ecef;
-}
-
-/* Tabs */
-.tab-active { border-bottom: 3px solid #fab52e; color: #0a1a36; font-weight: 600; }
-.tab-inactive { border-bottom: 3px solid transparent; color: #6c757d; }
-.tab-inactive:hover { color: #1e3a6e; border-bottom-color: #c5d0e6; }
-.prog-tab-content { display: none; }
-.prog-tab-content.active { display: block; }
-
-/* Sticky / Sidebars */
-.sticky-sidebar { position: sticky; top: 80px; }
-
-/* Supervisor / Module Cards */
-.supervisor-card:hover { border-color: #5a7ab8; box-shadow: var(--shadow-custom-hover); }
-.supervisor-card { transition: border-color 0.2s ease, box-shadow 0.2s ease; }
-.module-tag { transition: background-color 0.15s ease; }
-
-/* Accordion */
-.accordion-content { display: none; }
-.accordion-content.open { display: block; }
-.accordion-icon { transition: transform 0.2s ease; }
-.accordion-icon.open { transform: rotate(180deg); }
-
-/* Small helpers */
-.shadow-custom { box-shadow: var(--shadow-custom); }
-.rounded-small { border-radius: var(--radius-small); }
-.rounded-large { border-radius: var(--radius-large); }
-
-/* Mobile navigation toggling */
-#main-nav {
-  display: none;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-#main-nav.flex {
-  display: flex;
-}
-@media (min-width: 1024px) {
-  #main-nav {
-    display: flex !important;
-    flex-direction: row;
-  }
-}
-
-/* Dropdowns: allow click-to-open via JavaScript */
-.dropdown.open .dropdown-menu {
-  display: block !important;
-}
-
-/* End of consolidated styles */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 46px;
-  height: 24px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 18px;
-  width: 18px;
-  left: 3px;
-  bottom: 3px;
-  background-color: white;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #FDB813; /* SU gold style */
-}
-
-input:checked + .slider:before {
-  transform: translateX(22px);
-}
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-</style>  
-
   </head>
   <body
     class="font-body bg-background-50 text-neutral-900"
     style="height: auto; min-height: 100%"
   >
     <!-- Sticky Header -->
-    <!-- Sticky Header -->
-    <header class="sticky top-0 z-50 bg-[#420303] shadow-custom">
-
+    <header class="sticky top-0 z-50 bg-primary-900 shadow-custom">
+      <!-- Top utility bar -->
+      
 
       <!-- Main nav -->
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -219,14 +57,12 @@ input:checked + .slider:before {
             </div>
             <div class="hidden sm:block">
               <div
-                class="font-heading text-neutral-50 text-lg sm:text-xl lg:text-2xl font-semibold leading-tight"
-                data-key="brandNameShort"
+                class="font-heading text-neutral-50 text-base font-semibold leading-tight"
               >
                 Stellenbosch
               </div>
               <div
                 class="text-secondary-300 text-xs font-medium tracking-widest uppercase"
-                data-key="brandUniversity"
               >
                 University
               </div>
@@ -238,7 +74,6 @@ input:checked + .slider:before {
             <a
               href="about-page.html"
               class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors"
-              data-key="navAbout"
               >About</a
             >
 
@@ -247,7 +82,7 @@ input:checked + .slider:before {
               <button
                 class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors flex items-center gap-1"
               >
-                <span data-key="navAcademics">Academics</span>
+                Academics
                 <svg
                   class="w-3.5 h-3.5 text-neutral-400"
                   fill="none"
@@ -268,71 +103,32 @@ input:checked + .slider:before {
                 <a
                   href="undergraduate.html"
                   class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
-                  data-key="navUndergraduate"
                   >Undergraduate</a
                 >
                 <a
                   href="postgraduate.html"
                   class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
-                  data-key="navPostgraduate"
                   >Postgraduate</a
                 >
                 <a
                   href="research.html"
                   class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
-                  data-key="navResearch"
                   >Research</a
                 >
               </div>
             </div>
-            
-              <div class="dropdown relative">
-              <button
-                class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors flex items-center gap-1"
-              >
-                <span data-key="navPeople">People</span>
-                <svg
-                  class="w-3.5 h-3.5 text-neutral-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-              <div
-                class="dropdown-menu hidden absolute top-full left-0 mt-1 w-52 bg-white rounded-large shadow-custom-hover border border-neutral-200 py-1 z-50"
-              >
-                <a
-                  href="staff-page.html"
-                  class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
-                  data-key="navStaff"
-                  >Staff</a
-                >
-                <a
-                href="student-page.html"
-                class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
-                data-key="navStudents"
-                >Students</a
-              >
-                <a
-                  href="alumni-page.html"
-                  class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
-                  data-key="navAlumni"
-                  >Alumni</a
-                >
-              </div>
-            </div>
+
+            <a
+              href="research.html"
+              class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors"
+              >Research</a
+            >
+
             <div class="dropdown relative">
               <button
                 class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors flex items-center gap-1"
               >
-                <span data-key="navLinks">Links</span>
+                People
                 <svg
                   class="w-3.5 h-3.5 text-neutral-400"
                   fill="none"
@@ -351,62 +147,44 @@ input:checked + .slider:before {
                 class="dropdown-menu hidden absolute top-full left-0 mt-1 w-52 bg-white rounded-large shadow-custom-hover border border-neutral-200 py-1 z-50"
               >
                 <a
-                  href="https://www.su.ac.za/en"
+                  href="stuff.html"
                   class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
-                  data-key="navStellenboschUniversity"
-                  >Stellenbosch University</a
+                  >Stuff</a
                 >
                 <a
-                  href="https://www.su.ac.za/en/faculties/science"
+                  href="students.html"
                   class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
-                  data-key="navScienceFaculty"
-                  >Science Faculty</a
+                  >Students</a
                 >
                 <a
-                href="https://www.su.ac.za/en/apply/pg-studies/mathematical-sciences"
-                class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
-                data-key="navMathematicalSciences"
-                >Mathematical Sciences</a
-              >
-                <a
-                href="https://www.cs.sun.ac.za/iacs/"
-                class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
-                data-key="navInstituteOfAppliedCS"
-                >Institute of Applied CS</a
-              >
-                <a
-                href="https://group.telkom.co.za/governance/management-team.html"
-                class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
-                data-key="navTelkomNSNCEO"
-                >Telkom-NSN CEO</a
-              >
+                  href="alumni.html"
+                  class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                  >Alumni</a
+                >
               </div>
             </div>
             <a
               href="news.html"
               class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors"
-              data-key="navNews"
               >News</a
             >
             <a
               href="contact-page.html"
               class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors"
-              data-key="navContact"
               >Contact</a
             >
-            
           </nav>
 
           <!-- CTA Buttons -->
-           
           <div class="hidden lg:flex items-center gap-2">
             <a
               href="undergraduate.html"
               class="bg-secondary-400 hover:bg-secondary-300 text-primary-900 text-sm font-semibold px-4 py-2 rounded-small transition-colors"
-              data-key="ctaApplyNow"
               >Apply Now</a
             >
             <button
+              id="search-button"
+              aria-label="Search site"
               class="text-neutral-200 hover:text-neutral-50 p-2 rounded-small hover:bg-primary-800 transition-colors"
             >
               <svg
@@ -424,17 +202,23 @@ input:checked + .slider:before {
               </svg>
             </button>
           </div>
-          <div class="flex items-center gap-2 text-white text-sm font-semibold">
-            <span data-key="labelEn">EN</span>
-          
-            <label class="switch">
-              <input type="checkbox" id="languageToggle">
-              <span class="slider round"></span>
-            </label>
-          
-            <span data-key="labelAf">AF</span>
-          </div>
-          
+
+          <!-- Mobile menu button -->
+          <button class="lg:hidden text-neutral-200 p-2">
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </header>
@@ -1087,6 +871,14 @@ input:checked + .slider:before {
         <ul class="space-y-2.5">
           <li>
             <a
+              href="about-page.html"
+              class="text-neutral-400 text-sm hover:text-secondary-300 transition-colors"
+              data-key="footerAboutUs"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
               href="people.html"
               class="text-neutral-400 text-sm hover:text-secondary-300 transition-colors"
               data-key="footerPeople"
@@ -1244,180 +1036,5 @@ input:checked + .slider:before {
     </div>
   </div>
 </footer>
-  </footer>
-    <script>
-      const translations = {
-        en: {
-          brandNameShort: "Stellenbosch",
-          brandUniversity: "University",
-
-          labelEn: "EN",
-          labelAf: "AF",
-
-          navAcademics: "Academics",
-          navPeople: "People",
-          navNews: "News",
-          navContact: "Contact",
-          navLinks: "Links",
-          navUndergraduate: "Undergraduate",
-          navPostgraduate: "Postgraduate",
-          navResearch: "Research",
-          navStaff: "Staff",
-          navAlumni: "Alumni",
-          navStudents: "Students",
-          navStellenboschUniversity: "Stellenbosch University",
-          navScienceFaculty: "Science Faculty",
-          navMathematicalSciences: "Mathematical Sciences",
-          navInstituteOfAppliedCS: "Institute of Applied CS",
-          navTelkomNSNCEO: "Telkom-NSN CEO",
-
-          ctaApplyNow: "Apply Now",
-
-          footerBrandFull: "Stellenbosch University",
-          footerEst: "Est. 1918",
-          footerDescription:
-            "A leading African research university committed to excellence, innovation, and inclusive education for a better world.",
-
-          footerAcademicsHeading: "Academics",
-          footerUndergraduate: "Undergraduate",
-          footerPostgraduate: "Postgraduate",
-          footerResearch: "Research",
-          footerFaculties: "Faculties",
-          footerShortCourses: "Short Courses",
-
-          footerAboutHeading: "About SU",
-          footerPeople: "People",
-          footerNews: "News",
-          footerCampusMap: "Campus Map",
-          footerSustainability: "Sustainability",
-
-          footerContactHeading: "Contact",
-          footerAddress: "Victoria St, Stellenbosch, 7600, South Africa",
-          footerPhone1: "+27 61 729 8858",
-          footerPhone2: "+27 21 808 9111",
-          footerEmail: "info@sun.ac.za",
-
-          footerPrivacyPolicy: "Privacy Policy",
-          footerTermsOfUse: "Terms of Use",
-          footerAccessibility: "Accessibility",
-          footerCopyright:
-            "© 2026 Stellenbosch University & MediaBay. All rights reserved.",
-        },
-        af: {
-          brandNameShort: "Stellenbosch",
-          brandUniversity: "Universiteit",
-
-          labelEn: "EN",
-          labelAf: "AF",
-
-          navAcademics: "Akademies",
-          navPeople: "Mense",
-          navNews: "Nuus",
-          navContact: "Kontak",
-          navLinks: "Skakels",
-          navUndergraduate: "Voorgraadse",
-          navPostgraduate: "Nagraadse",
-          navResearch: "Navorsing",
-          navStaff: "Personeel",
-          navAlumni: "Alumni",
-          navStellenboschUniversity: "Universiteit Stellenbosch",
-          navScienceFaculty: "Wetenskapsfakulteit",
-          navMathematicalSciences: "Wiskundige Wetenskappe",
-          navInstituteOfAppliedCS: "Instituut vir Toegepaste Rekenaarwetenskap",
-          navTelkomNSNCEO: "Telkom-NSN HUB",
-
-          ctaApplyNow: "Doen Nou Aansoek",
-
-          footerBrandFull: "Universiteit Stellenbosch",
-          footerEst: "Gest. 1918",
-          footerDescription:
-            "’n Toonaangewende Afrika-navorsingsuniversiteit wat toegewy is aan uitnemendheid, innovasie en inklusiewe onderrig vir ’n beter wêreld.",
-
-          footerAcademicsHeading: "Akademies",
-          footerUndergraduate: "Voorgraadse",
-          footerPostgraduate: "Nagraadse",
-          footerResearch: "Navorsing",
-          footerFaculties: "Fakulteite",
-          footerShortCourses: "Kort Kursusse",
-
-          footerAboutHeading: "Oor SU",
-          footerPeople: "Mense",
-          footerNews: "Nuus",
-          footerCampusMap: "Kampuskaart",
-          footerSustainability: "Volhoubaarheid",
-
-          footerContactHeading: "Kontak",
-          footerAddress: "Victoria Straat, Stellenbosch, 7600, Suid-Afrika",
-          footerPhone1: "+27 61 729 8858",
-          footerPhone2: "+27 21 808 9111",
-          footerEmail: "info@sun.ac.za",
-
-          footerPrivacyPolicy: "Privaatheidsbeleid",
-          footerTermsOfUse: "Gebruiksvoorwaardes",
-          footerAccessibility: "Toeganklikheid",
-          footerCopyright:
-            "© 2026 Universiteit Stellenbosch & MediaBay. Alle regte voorbehou.",
-        },
-      };
-
-      const DEFAULT_LANG = "en";
-      const STORAGE_KEY = "siteLanguage";
-
-      function getInitialLanguage() {
-        try {
-          const stored = localStorage.getItem(STORAGE_KEY);
-          if (stored && translations[stored]) {
-            return stored;
-          }
-        } catch (e) {
-          // ignore
-        }
-        return DEFAULT_LANG;
-      }
-
-      function saveLanguage(lang) {
-        try {
-          localStorage.setItem(STORAGE_KEY, lang);
-        } catch (e) {
-          // ignore
-        }
-      }
-
-      function applyLanguage(lang) {
-        const langPack = translations[lang] || translations[DEFAULT_LANG];
-        document.documentElement.lang = lang;
-
-        document.querySelectorAll("[data-key]").forEach((el) => {
-          const key = el.getAttribute("data-key");
-          const value = langPack[key];
-          if (typeof value === "string") {
-            el.textContent = value;
-          }
-        });
-      }
-
-      function syncToggleWithLanguage(lang) {
-        const toggle = document.getElementById("languageToggle");
-        if (!toggle) return;
-        toggle.checked = lang === "af";
-      }
-
-      function initLanguageToggle() {
-        const currentLang = getInitialLanguage();
-        applyLanguage(currentLang);
-        syncToggleWithLanguage(currentLang);
-
-        const toggle = document.getElementById("languageToggle");
-        if (!toggle) return;
-
-        toggle.addEventListener("change", () => {
-          const newLang = toggle.checked ? "af" : "en";
-          applyLanguage(newLang);
-          saveLanguage(newLang);
-        });
-      }
-
-      document.addEventListener("DOMContentLoaded", initLanguageToggle);
-    </script>
   </body>
 </html>
