@@ -19,254 +19,26 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       id="heading-font-link"
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link
       id="body-font-link"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <script src="js/homepage.js"></script>
     <script src="js/global.js"></script>
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/homepage.css" />
-    <style>
-     /* Consolidated global styles extracted from HTML files */
-
-:root {
-  --font-heading-name: 'Playfair Display';
-  --font-body-name: 'Inter';
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'Inter', sans-serif;
-  --letter-spacing-heading: -0.25px;
-  --letter-spacing-body: 0px;
-  --space-base: 1rem;
-  --radius-small: 4px;
-  --radius-large: 8px;
-  --border-width: 1px;
-  --shadow-color: 10 26 54;
-  --shadow-offset-x: 0px;
-  --shadow-offset-y: 4px;
-  --shadow-blur: 16px;
-  --shadow-spread: 0px;
-  --shadow-opacity: 0.12;
-  --shadow-custom: 0px 4px 16px 0px rgba(10, 26, 54, 0.12);
-  --shadow-custom-hover: 0px 8px 28px 0px rgba(10, 26, 54, 0.2);
-}
-
-/* Utility / Navigation */
-.dropdown:hover .dropdown-menu { display: block; }
-.nav-link-hover:hover { color: #fbc352; }
-
-/* Hero & Overlays */
-.hero-overlay { background: linear-gradient(135deg, rgba(10, 26, 54, 0.82) 0%, rgba(30, 58, 110, 0.65) 60%, rgba(30, 58, 110, 0.3) 100%); }
-.page-hero-overlay { background: linear-gradient(135deg, rgba(10, 26, 54, 0.90) 0%, rgba(30, 58, 110, 0.75) 60%, rgba(30, 58, 110, 0.4) 100%); }
-
-/* Cards */
-.card-hover:hover { transform: translateY(-3px); box-shadow: var(--shadow-custom-hover); }
-.card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
-.research-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-custom-hover); }
-.research-card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
-
-/* Tags & Staff */
-.theme-tag { display: inline-flex; align-items: center; gap: 4px; }
-.staff-card:hover { border-color: #5a7ab8; box-shadow: var(--shadow-custom-hover); }
-.staff-card { transition: border-color 0.2s ease, box-shadow 0.2s ease; }
-.filter-btn.active { background-color: #1e3a6e; color: #f8f9fa; border-color: #1e3a6e; }
-
-/* Timeline */
-.timeline-line::before {
-  content: '';
-  position: absolute;
-  left: 19px;
-  top: 32px;
-  bottom: 0;
-  width: 2px;
-  background: #e9ecef;
-}
-
-/* Tabs */
-.tab-active { border-bottom: 3px solid #fab52e; color: #0a1a36; font-weight: 600; }
-.tab-inactive { border-bottom: 3px solid transparent; color: #6c757d; }
-.tab-inactive:hover { color: #1e3a6e; border-bottom-color: #c5d0e6; }
-.prog-tab-content { display: none; }
-.prog-tab-content.active { display: block; }
-
-/* Sticky / Sidebars */
-.sticky-sidebar { position: sticky; top: 80px; }
-
-/* Supervisor / Module Cards */
-.supervisor-card:hover { border-color: #5a7ab8; box-shadow: var(--shadow-custom-hover); }
-.supervisor-card { transition: border-color 0.2s ease, box-shadow 0.2s ease; }
-.module-tag { transition: background-color 0.15s ease; }
-
-/* Accordion */
-.accordion-content { display: none; }
-.accordion-content.open { display: block; }
-.accordion-icon { transition: transform 0.2s ease; }
-.accordion-icon.open { transform: rotate(180deg); }
-
-/* Small helpers */
-.shadow-custom { box-shadow: var(--shadow-custom); }
-.rounded-small { border-radius: var(--radius-small); }
-.rounded-large { border-radius: var(--radius-large); }
-
-/* Mobile navigation toggling */
-#main-nav {
-  display: none;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-#main-nav.flex {
-  display: flex;
-}
-@media (min-width: 1024px) {
-  #main-nav {
-    display: flex !important;
-    flex-direction: row;
-  }
-}
-
-/* Dropdowns: allow click-to-open via JavaScript */
-.dropdown.open .dropdown-menu {
-  display: block !important;
-}
-
-/* End of consolidated styles */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 46px;
-  height: 24px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 18px;
-  width: 18px;
-  left: 3px;
-  bottom: 3px;
-  background-color: white;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #FDB813; /* SU gold style */
-}
-
-input:checked + .slider:before {
-  transform: translateX(22px);
-}
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-.alumni-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.alumni-card {
-  flex: 1 1 250px;
-  background: white;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  transition: 0.2s ease;
-  font-weight: 500;
-}
-
-.alumni-card:hover {
-  transform: translateY(-3px);
-}
-
-
-select{
-  padding: 8px 12px;
-  border-radius: 6px;
-  background-color: #FDB813;
-  border: 1px solid #420303;
-  font-size: 14px;
-  text-align: left;
-  
-}
-
-.year-select{
-    margin-left: 5px;
-    margin-bottom: 5px
-
-}
-.year-content {
-  display: none;
-  padding: 10px 0 10px 15px;
-}
-.section-title{
-    font-size: 18px;
-  font-weight: bold;
-  margin: 40px 20px 20px;
-}
-.student-card {
-    background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.student-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 22px rgba(0,0,0,0.12);
-}
-.student-name {
-    font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-.student-research {
-    margin-top: 10px;
-  font-size: 14px;
-  color: #444;
-}
-.students-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-}
-.research-link{
-    color:#5a7ab8;
-}
-</style>  
+      
 
   </head>
 
   <body>
 
     <!-- Sticky Header -->
-    <header class="sticky top-0 z-50 bg-[#420303] shadow-custom">
+ <header class="sticky top-0 z-50 bg-[#420303] shadow-custom">
 
 
       <!-- Main nav -->
@@ -301,13 +73,6 @@ select{
 
           <!-- Nav links -->
           <nav class="hidden lg:flex items-center gap-1">
-            <a
-              href="about-page.html"
-              class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors"
-              data-key="navAbout"
-              >About</a
-            >
-
             <!-- Academics dropdown -->
             <div class="dropdown relative">
               <button
@@ -329,7 +94,7 @@ select{
                 </svg>
               </button>
               <div
-                class="dropdown-menu hidden absolute top-full left-0 mt-1 w-52 bg-white rounded-large shadow-custom-hover border border-neutral-200 py-1 z-50"
+                class="dropdown-menu hidden absolute top-full left-0 w-52 bg-white rounded-large shadow-custom-hover border border-neutral-200 py-1 z-50"
               >
                 <a
                   href="undergraduate.html"
@@ -372,7 +137,7 @@ select{
                 </svg>
               </button>
               <div
-                class="dropdown-menu hidden absolute top-full left-0 mt-1 w-52 bg-white rounded-large shadow-custom-hover border border-neutral-200 py-1 z-50"
+                class="dropdown-menu hidden absolute top-full left-0 w-52 bg-white rounded-large shadow-custom-hover border border-neutral-200 py-1 z-50"
               >
                 <a
                   href="staff-page.html"
@@ -414,7 +179,7 @@ select{
                 </svg>
               </button>
               <div
-                class="dropdown-menu hidden absolute top-full left-0 mt-1 w-52 bg-white rounded-large shadow-custom-hover border border-neutral-200 py-1 z-50"
+                class="dropdown-menu hidden absolute top-full left-0 w-52 bg-white rounded-large shadow-custom-hover border border-neutral-200 py-1 z-50"
               >
                 <a
                   href="https://www.su.ac.za/en"
@@ -448,18 +213,8 @@ select{
               >
               </div>
             </div>
-            <a
-              href="news.html"
-              class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors"
-              data-key="navNews"
-              >News</a
-            >
-            <a
-              href="contact-page.html"
-              class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors"
-              data-key="navContact"
-              >Contact</a
-            >
+                      <a href="homepage.html#contact" class="nav-link-hover ...">Contact</a>
+
             
           </nav>
 
@@ -472,23 +227,7 @@ select{
               data-key="ctaApplyNow"
               >Apply Now</a
             >
-            <button
-              class="text-neutral-200 hover:text-neutral-50 p-2 rounded-small hover:bg-primary-800 transition-colors"
-            >
-              <svg
-                class="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
-            </button>
+
           </div>
           <div class="flex items-center gap-2 text-white text-sm font-semibold">
             <span data-key="labelEn">EN</span>
@@ -505,7 +244,7 @@ select{
       </div>
     </header>
 
-    <h2 class="section-title" data-key="alumniFacultyTitle">Alumni Faculty</h2>
+    <h2 class="section" data-key="alumniFacultyTitle">Alumni Faculty</h2>
 
         <div class="alumni-grid">
 
@@ -553,14 +292,14 @@ select{
             <!-- 2025 -->
             <div class="student-card" data-year="1">
                 <h3>Erwin, W</h3>
-                <a style="color:rgb(0, 128, 255)" href="https://cs.sun.ac.za/people/alumni/" data-key="doctoralThesisErwin">
+                <a style="color:#FDB813" href="https://cs.sun.ac.za/people/alumni/" data-key="doctoralThesisErwin">
                     Landscape aware algorithm selection for feature selection
                 </a>
             </div>
         
             <div class="student-card" data-year="1">
                 <h3>Baker Effendi, S</h3>
-                <a style="color:rgb(0, 128, 255)" href="https://cs.sun.ac.za/people/alumni/" data-key="doctoralThesisBakerEffendi">
+                <a style="color:#FDB813" href="https://cs.sun.ac.za/people/alumni/" data-key="doctoralThesisBakerEffendi">
                     An Approach to Modern Static Analysis with Property Graphs
                 </a>
             </div>
@@ -568,14 +307,14 @@ select{
             <!-- 2023 -->
             <div class="student-card" data-year="2">
                 <h3>Werner, W</h3>
-                <a style="color:rgb(0, 128, 255)" href="https://scholar.sun.ac.za/handle/10019.1/128812" data-key="doctoralThesisWerner">
+                <a style="color:#FDB813" href="https://scholar.sun.ac.za/handle/10019.1/128812" data-key="doctoralThesisWerner">
                     Landscape aware algorithm selection for feature selection
                 </a>
             </div>
         
             <div class="student-card" data-year="2">
                 <h3>Moeketsi, RI</h3>
-                <a style="color:rgb(0, 128, 255)" href="#http://hdl.handle.net/10019.1/127229" data-key="doctoralThesisMoeketsi">
+                <a style="color:#FDB813" href="https://scholar.sun.ac.za/handle/10019.1/127229" data-key="doctoralThesisMoeketsi">
                     Fault Localization and Repair for Grammarware
                 </a>
             </div>
@@ -583,7 +322,7 @@ select{
             <!-- 2022 -->
             <div class="student-card" data-year="3">
                 <h3>Omomule, TG</h3>
-                <a style="color:rgb(0, 128, 255)" href="http://hdl.handle.net/10019.1/125916" data-key="doctoralThesisOmomule">
+                <a style="color:#FDB813" href="https://scholar.sun.ac.za/handle/10019.1/125916" data-key="doctoralThesisOmomule">
                     Mixtures of heterogeneous experts
                 </a>
             </div>
@@ -591,7 +330,7 @@ select{
             <!-- 2020 -->
             <div class="student-card" data-year="4">
                 <h3>Masakuna, JF</h3>
-                <a style="color:rgb(0, 128, 255)" href="https://scholar.sun.ac.za/handle/10019.1/109111" data-key="doctoralThesisMasakuna">
+                <a style="color:#FDB813" href="https://scholar.sun.ac.za/handle/10019.1/109111" data-key="doctoralThesisMasakuna">
                     Active strategies for coordination of solitary robots
                 </a>
             </div>
@@ -599,14 +338,14 @@ select{
             <!-- 2019 -->
             <div class="student-card" data-year="5">
                 <h3>Pretorius, A</h3>
-                <a style="color:rgb(0, 128, 255)" href="http://hdl.handle.net/10019.1/107035" data-key="doctoralThesisPretorius">
+                <a style="color:#FDB813" href="https://scholar.sun.ac.za/handle/10019.1/107035" data-key="doctoralThesisPretorius">
                     On noise regularised neural networks: initialisation, learning and inference
                 </a>
             </div>
         
             <div class="student-card" data-year="5">
                 <h3>Dunaiski, MP</h3>
-                <a style="color:rgb(0, 128, 255)" href="http://hdl.handle.net/10019.1/105866" data-key="doctoralThesisDunaiski">
+                <a style="color:#FDB813" href="https://scholar.sun.ac.za/handle/10019.1/105866" data-key="doctoralThesisDunaiski">
                     Using test data to evaluate rankings of entities in large scholarly citation networks
                 </a>
             </div>
@@ -614,7 +353,7 @@ select{
             <!-- 2018 -->
             <div class="student-card" data-year="6">
                 <h3>Marais, L</h3>
-                <a style="color:rgb(0, 128, 255)" href="http://scholar.sun.ac.za/handle/10019.1/103471" data-key="doctoralThesisMarais">
+                <a style="color:#FDB813" href="https://scholar.sun.ac.za/handle/10019.1/103471" data-key="doctoralThesisMarais">
                     Generalised acceptance conditions for symmetric difference nondeterministic finite automata
                 </a>
             </div>
@@ -622,14 +361,14 @@ select{
             <!-- 2017 -->
             <div class="student-card" data-year="7">
                 <h3>Greene, GJ</h3>
-                <a style="color:rgb(0, 128, 255)" href="http://scholar.sun.ac.za/handle/10019.1/100859" data-key="doctoralThesisGreene">
+                <a style="color:#FDB813" href="https://scholar.sun.ac.za/handle/10019.1/100859" data-key="doctoralThesisGreene">
                     Concept-Based Exploration of Rich Semi-Structured Data Collections
                 </a>
             </div>
         
             <div class="student-card" data-year="7">
                 <h3>Botha, H-M</h3>
-                <a style="color:rgb(0, 128, 255)" href="http://scholar.sun.ac.za/handle/10019.1/102802" data-key="doctoralThesisBothaHM">
+                <a style="color:#FDB813" href="https://scholar.sun.ac.za/handle/10019.1/102802" data-key="doctoralThesisBothaHM">
                     Verifying Android Applications Using Java PathFinder
                 </a>
             </div>
@@ -637,7 +376,7 @@ select{
             <!-- 2012 -->
             <div class="student-card" data-year="8">
                 <h3>Murrell, BS</h3>
-                <a style="color:rgb(0, 128, 255)" href="http://scholar.sun.ac.za/handle/10019.1/71870" data-key="doctoralThesisMurrell">
+                <a style="color:#FDB813" href="https://scholar.sun.ac.za/handle/10019.1/71870" data-key="doctoralThesisMurrell">
                     Improved Models of Biological Sequence Evolution
                 </a>
             </div>
@@ -645,35 +384,35 @@ select{
             <!-- 1999 -->
             <div class="student-card" data-year="9">
                 <h3>Viktor, HL</h3>
-                <a style="color:rgb(0, 128, 255)" href="http://scholar.sun.ac.za/handle/10019.1/51319" data-key="doctoralThesisViktor">
+                <a style="color:#FDB813" href="https://scholar.sun.ac.za/handle/10019.1/51319" data-key="doctoralThesisViktor">
                     Learning by Cooperation: An Approach to Rule Induction and Knowledge Fusion
                 </a>
             </div>
         
             <div class="student-card" data-year="9">
                 <h3>Theron, PZ</h3>
-                <a style="color:rgb(0, 128, 255)" href="http://scholar.sun.ac.za/handle/10019.1/51149" data-key="doctoralThesisTheronPZ">
+                <a style="color:#FDB813" href="https://scholar.sun.ac.za/handle/10019.1/51149" data-key="doctoralThesisTheronPZ">
                     Automatic Acquisition of Two-Level Morphological Rules
                 </a>
             </div>
         
             <div class="student-card" data-year="9">
                 <h3>Ewert, SG</h3>
-                <a style="color:rgb(0, 128, 255)" href="http://scholar.sun.ac.za/handle/10019.1/49385" data-key="doctoralThesisEwert">
+                <a style="color:#FDB813" href="https://scholar.sun.ac.za/handle/10019.1/49385" data-key="doctoralThesisEwert">
                     Random Context Picture Grammars
                 </a>
             </div>
         
             <div class="student-card" data-year="9">
                 <h3>Engelbrecht, AP</h3>
-                <a style="color:rgb(0, 128, 255)" href="http://scholar.sun.ac.za/handle/10019.1/51420" data-key="doctoralThesisEngelbrecht">
+                <a style="color:#FDB813" href="https://scholar.sun.ac.za/handle/10019.1/51420" data-key="doctoralThesisEngelbrecht">
                     Sensitivity Analysis of Multilayer Neural Networks
                 </a>
             </div>
         
             <div class="student-card" data-year="9">
                 <h3>De Villiers, PJA</h3>
-                <a style="color:rgb(0, 128, 255)" href="http://scholar.sun.ac.za/handle/10019.1/51539" data-key="doctoralThesisDeVilliers">
+                <a style="color:#FDB813" href="https://scholar.sun.ac.za/handle/10019.1/51539" data-key="doctoralThesisDeVilliers">
                     Validation of a Microkernel: A Case Study
                 </a>
             </div>
@@ -681,14 +420,14 @@ select{
             <!-- 1997 -->
             <div class="student-card" data-year="10">
                 <h3>Van Zijl, L</h3>
-                <a style="color:rgb(0, 128, 255)" href="http://scholar.sun.ac.za/handle/10019.1/55541" data-key="doctoralThesisVanZijl">
+                <a style="color:#FDB813" href="https://scholar.sun.ac.za/handle/10019.1/55541" data-key="doctoralThesisVanZijl">
                     Generalized Nondeterminism and the Succinct Representation of Regular Languages
                 </a>
             </div>
         
             <div class="student-card" data-year="10">
                 <h3>Van der Poel, E</h3>
-                <a style="color:rgb(0, 128, 255)" href="http://scholar.sun.ac.za/handle/10019.1/55361" data-key="doctoralThesisVanDerPoel">
+                <a style="color:#FDB813" href="https://scholar.sun.ac.za/handle/10019.1/55361" data-key="doctoralThesisVanDerPoel">
                     A Generalization of the Hopfield Single-Layer Recurrent Neural Network
                 </a>
             </div>
@@ -696,14 +435,14 @@ select{
             <!-- 1994 -->
             <div class="student-card" data-year="11">
                 <h3>Ludik, J</h3>
-                <a style="color:rgb(0, 128, 255)" href="http://scholar.sun.ac.za/handle/10019.1/58622" data-key="doctoralThesisLudik">
+                <a style="color:#FDB813" href="https://scholar.sun.ac.za/handle/10019.1/58622" data-key="doctoralThesisLudik">
                     Training, Dynamics, and Complexity of Architecture-Specific Recurrent Neural Networks
                 </a>
             </div>
         
             <div class="student-card" data-year="11">
                 <h3>Theron, H</h3>
-                <a style="color:rgb(0, 128, 255)" href="http://scholar.sun.ac.za/handle/10019.1/54616" data-key="doctoralThesisTheronH">
+                <a style="color:#FDB813" href="https://scholar.sun.ac.za/handle/10019.1/54616" data-key="doctoralThesisTheronH">
                     Specialization by Exclusion: An Approach to Concept Learning
                 </a>
             </div>
@@ -755,422 +494,422 @@ select{
             <!-- 2024 -->
             <div class="student-card" data-year="1">
             <h3>Strelitz, BS</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersStrelitzBS">
+            <a style="color:#FDB813" href="#" data-key="mastersStrelitzBS">
                 Particle swarm optimization for constrained multimodal function optimization
             </a>
         </div>
             
         <div class="student-card" data-year="1">
             <h3>Nakiranda, P</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersNakirandaP">
+            <a style="color:#FDB813" href="#" data-key="mastersNakirandaP">
                 Building identification in aerial imagery using deep learning
             </a>
         </div>
             
         <div class="student-card" data-year="1">
             <h3>Lang, RD</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersLangRD">
+            <a style="color:#FDB813" href="#" data-key="mastersLangRD">
                 Landscape analysis-based automated algorithm selection
             </a>
         </div>
             
         <div class="student-card" data-year="1">
             <h3>Kane, BR</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersKaneBR">
+            <a style="color:#FDB813" href="#" data-key="mastersKaneBR">
                 Ergo: a gesture-based computer interaction device
             </a>
         </div>
             
         <div class="student-card" data-year="1">
             <h3>Du Toit, J</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersDuToitJ">
+            <a style="color:#FDB813" href="#" data-key="mastersDuToitJ">
                 Hierarchical text classification with transformer-based language models
             </a>
         </div>
             
         <div class="student-card" data-year="1">
             <h3>Dewey, MG</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersDeweyMG">Large language models and software testing</a>
+            <a style="color:#FDB813" href="#" data-key="mastersDeweyMG">Large language models and software testing</a>
         </div>
 
         <!--2023-->
             <div class="student-card" data-year="2">
                 <h3>Van Zyl, J-P</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersVanZylJP">Rule Induction with Swarm Intelligence</a>
+                <a style="color:#FDB813" href="#" data-key="mastersVanZylJP">Rule Induction with Swarm Intelligence</a>
             </div>
         
             <div class="student-card" data-year="2">
                 <h3>Van Zyl, C</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersVanZylC">Implementation of the Cavalieri Integral</a>
+                <a style="color:#FDB813" href="#" data-key="mastersVanZylC">Implementation of the Cavalieri Integral</a>
             </div>
         
             <div class="student-card" data-year="2">
                 <h3>Mouton, J</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersMoutonJ">Integrating Bayesian network structure into normalizing flows and variational autoencoders</a>
+                <a style="color:#FDB813" href="#" data-key="mastersMoutonJ">Integrating Bayesian network structure into normalizing flows and variational autoencoders</a>
             </div>
         
             <div class="student-card" data-year="2">
                 <h3>Jackson, J</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersJacksonJ">Calibration artefacts and interferometric imaging education tool</a>
+                <a style="color:#FDB813" href="#" data-key="mastersJacksonJ">Calibration artefacts and interferometric imaging education tool</a>
             </div>
         
             <div class="student-card" data-year="2">
                 <h3>Dreyer, A</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersDreyerA">Using transformers to assign ICD codes to medical notes</a>
+                <a style="color:#FDB813" href="#" data-key="mastersDreyerA">Using transformers to assign ICD codes to medical notes</a>
             </div>
         <!--2022-->
             <div class="student-card" data-year="3">
                 <h3>Van Litsenborgh, PS</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersVanLitsenborghPS">An investigation into performance-related issues of regular expression matching</a>
+                <a style="color:#FDB813" href="#" data-key="mastersVanLitsenborghPS">An investigation into performance-related issues of regular expression matching</a>
             </div>
         
             <div class="student-card" data-year="3">
                 <h3>Rossouw, CJ</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersRossouwCJ">Coverage directed algorithms for test suite construction from LR-automata</a>
+                <a style="color:#FDB813" href="#" data-key="mastersRossouwCJ">Coverage directed algorithms for test suite construction from LR-automata</a>
             </div>
         
             <div class="student-card" data-year="3">
                 <h3>Habeck, M</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersHabeckM">The generation of longest optimal box repetition-free words</a>
+                <a style="color:#FDB813" href="#" data-key="mastersHabeckM">The generation of longest optimal box repetition-free words</a>
             </div>
         
             <div class="student-card" data-year="3">
                 <h3>Burger, CN</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersBurgerCN">Extension of linear regression for vessel trajectory prediction</a>
+                <a style="color:#FDB813" href="#" data-key="mastersBurgerCN">Extension of linear regression for vessel trajectory prediction</a>
             </div>
         
             <div class="student-card" data-year="3">
                 <h3>Bekcer, AB</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersBekcerAB">Statistical pattern recognition and deep learning in radio astronomy</a>
+                <a style="color:#FDB813" href="#" data-key="mastersBekcerAB">Statistical pattern recognition and deep learning in radio astronomy</a>
             </div>
 
         <!--2021-->
             <div class="student-card" data-year="4">
                 <h3>Mohamed, Z</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersMohamedZ">Explaining neural networks used for modeling credit risk</a>
+                <a style="color:#FDB813" href="#" data-key="mastersMohamedZ">Explaining neural networks used for modeling credit risk</a>
             </div>
         
             <div class="student-card" data-year="4">
                 <h3>Steenkamp, C</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersSteenkampC">Multi-guide particle swarm optimization for many-objective problems</a>
+                <a style="color:#FDB813" href="#" data-key="mastersSteenkampC">Multi-guide particle swarm optimization for many-objective problems</a>
             </div>
         
             <div class="student-card" data-year="4">
                 <h3>Erwin, KH</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersErwinKH">Set-based particle swarm optimization for portfolio optimization</a>
+                <a style="color:#FDB813" href="#" data-key="mastersErwinKH">Set-based particle swarm optimization for portfolio optimization</a>
             </div>
         
             <div class="student-card" data-year="4">
                 <h3>Strydom, S</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersStrydomS">Automatic assignment of diagnosis codes to free-form text medical notes</a>
+                <a style="color:#FDB813" href="#" data-key="mastersStrydomS">Automatic assignment of diagnosis codes to free-form text medical notes</a>
             </div>
         
             <div class="student-card" data-year="4">
                 <h3>Van Biljon, E</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersVanBiljonE">Initialisation of noise-regularised neural networks</a>
+                <a style="color:#FDB813" href="#" data-key="mastersVanBiljonE">Initialisation of noise-regularised neural networks</a>
             </div>
         
             <div class="student-card" data-year="4">
                 <h3>Steyl, CC</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersSteylCC">Deep framework for predictive maintenance</a>
+                <a style="color:#FDB813" href="#" data-key="mastersSteylCC">Deep framework for predictive maintenance</a>
             </div>
         
             <div class="student-card" data-year="4">
                 <h3>Du Toit, N</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersDuToitN">Linearisability checking of non-blocking concurrent data structures</a>
+                <a style="color:#FDB813" href="#" data-key="mastersDuToitN">Linearisability checking of non-blocking concurrent data structures</a>
             </div>
 
         <!--2020-->
             <div class="student-card" data-year="5">
                 <h3>Christoph, M</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersChristophM">
+                <a style="color:#FDB813" href="#" data-key="mastersChristophM">
                 Parallel Monte-Carlo tree search in distributed environments
             </a>
         </div>
         
             <div class="student-card" data-year="5">
                 <h3>Leid, A</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersLeidA">
+                <a style="color:#FDB813" href="#" data-key="mastersLeidA">
                 Testing smart contracts
             </a>
         </div>
         
             <div class="student-card" data-year="5">
                 <h3>Berndt, J</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersBerndtJ">
+                <a style="color:#FDB813" href="#" data-key="mastersBerndtJ">
                 Scaling the ConceptCloud browser to very large semi-structured data sets: architecture and data completion
             </a>
         </div>
 
             <div class="student-card" data-year="6">
                 <h3>Taljaard, MH</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersTaljaardMH">
+                <a style="color:#FDB813" href="#" data-key="mastersTaljaardMH">
                 Optimised constraint solving for real-world problems
             </a>
         </div>
 
             <div class="student-card" data-year="7">
                 <h3>Martin, JJ</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersMartinJJ">
+                <a style="color:#FDB813" href="#" data-key="mastersMartinJJ">
                 Creating 3D models using reconstruction techniques
             </a>
         </div>
         
             <div class="student-card" data-year="7">
                 <h3>Schreiber, S</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersSchreiberS">
+                <a style="color:#FDB813" href="#" data-key="mastersSchreiberS">
                 Texture synthesis with neural networks
             </a>
         </div>
         
             <div class="student-card" data-year="7">
                 <h3>Thom, JD</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersThomJD">
+                <a style="color:#FDB813" href="#" data-key="mastersThomJD">
                 Combining tree kernels and text embeddings for plagiarism detection
             </a>
         </div>
         
             <div class="student-card" data-year="7">
                 <h3>Breytenbach, JA</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersBreytenbachJA">
+                <a style="color:#FDB813" href="#" data-key="mastersBreytenbachJA">
                 Design and evaluation of a formula cache for SMT-based bounded model checking tools
             </a>
         </div>
         
             <div class="student-card" data-year="7">
                 <h3>Wiehman, S</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersWiehmanS">
+                <a style="color:#FDB813" href="#" data-key="mastersWiehmanS">
                 Investigating fully convolutional networks for bio-image segmentation
             </a>
         </div>
         
             <div class="student-card" data-year="7">
                 <h3>Esterhuizen, MH</h3>
-                <a style="color:rgb(0,128,255)" href="#" data-key="mastersEsterhuizenMH">
+                <a style="color:#FDB813" href="#" data-key="mastersEsterhuizenMH">
                 Test case generation for context free grammars
             </a>
         </div>
 
         <div class="student-card" data-year="8">
             <h3>Weideman, NH</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersWeidemanNH">
+            <a style="color:#FDB813" href="#" data-key="mastersWeidemanNH">
                 Static Analysis of Regular Expressions
             </a>
         </div>
 
         <div class="student-card" data-year="9">
             <h3>Venter, DW</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersVenterDW">
+            <a style="color:#FDB813" href="#" data-key="mastersVenterDW">
                 Detecting and Quantifying Resource Contention in Concurrent Programs
             </a>
         </div>
         
         <div class="student-card" data-year="9">
             <h3>Mwale, M</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersMwaleM">
+            <a style="color:#FDB813" href="#" data-key="mastersMwaleM">
                 Modelling the Dynamics of the Bitcoin Blockchain
             </a>
         </div>
         
         <div class="student-card" data-year="9">
             <h3>Brand, DJ</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersBrandDJ">
+            <a style="color:#FDB813" href="#" data-key="mastersBrandDJ">
                 Automatic Prediction of Comment Quality
             </a>
         </div>
 <!--2015-->
         <div class="student-card" data-year="10">
             <h3>Jordaan, PJG</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersJordaanPJG">
+            <a style="color:#FDB813" href="#" data-key="mastersJordaanPJG">
                 Impendulo: A Tool for Analysing Programmer Behaviour
             </a>
         </div>
 
         <div class="student-card" data-year="10">
             <h3>Fourie, R</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersFourieR">
+            <a style="color:#FDB813" href="#" data-key="mastersFourieR">
                 A Parallel Cellular Automaton Simulation Framework Using CUDA
             </a>
         </div>
 
         <div class="student-card" data-year="10">
             <h3>Coetzee, AL</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersCoetzeeAL">
+            <a style="color:#FDB813" href="#" data-key="mastersCoetzeeAL">
                 Combining Reverse Debugging and Live Programming Towards Visual Thinking in Computer Programming
             </a>
         </div>
 
         <div class="student-card" data-year="10">
             <h3>Babalola, OT</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersBabalolaOT">
+            <a style="color:#FDB813" href="#" data-key="mastersBabalolaOT">
                 Automatic Recognition and Interpretation of Finite State Automata Diagrams
             </a>
         </div>
         <!--2014-->
         <div class="student-card" data-year="11">
             <h3>Van Niekerk, F</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersVanNiekerkF">
+            <a style="color:#FDB813" href="#" data-key="mastersVanNiekerkF">
                 Decision Forests for Computer Go Feature Learning
             </a>
         </div>
 
         <div class="student-card" data-year="11">
             <h3>Kruger, RP</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersKrugerRP">
+            <a style="color:#FDB813" href="#" data-key="mastersKrugerRP">
                 Virtual World Accessibility: A Multitool Approach
             </a>
         </div>
 
         <div class="student-card" data-year="11">
             <h3>Dunaiski, MP</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersDunaiskiMP">
+            <a style="color:#FDB813" href="#" data-key="mastersDunaiskiMP">
                 Analysing Ranking Algorithms and Publication Trends on Scholarly Citation Networks
             </a>
         </div>
         <!--2013-->
         <div class="student-card" data-year="12">
             <h3>Uwimbabazi, A</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersUwimbabaziA">
+            <a style="color:#FDB813" href="#" data-key="mastersUwimbabaziA">
                 Extended Probabilistic Symbolic Execution
             </a>
         </div>
 
         <div class="student-card" data-year="12">
             <h3>Theron, PJ</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersTheronPJ">
+            <a style="color:#FDB813" href="#" data-key="mastersTheronPJ">
                 Criteria for the Evaluation of Private Cloud Computing
             </a>
         </div>
 
         <div class="student-card" data-year="12">
             <h3>Rajaona, SF</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersRajaonaSF">
+            <a style="color:#FDB813" href="#" data-key="mastersRajaonaSF">
                 An Algebraic Framework for Reasoning About Security
             </a>
         </div>
 
         <div class="student-card" data-year="12">
             <h3>Durant, K</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersDurantK">
+            <a style="color:#FDB813" href="#" data-key="mastersDurantK">
                 Investigating the Non-termination of Affine Loops
             </a>
         </div>
 
         <div class="student-card" data-year="12">
             <h3>De Villiers, PF</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersDeVilliersPF">
+            <a style="color:#FDB813" href="#" data-key="mastersDeVilliersPF">
                 Constructing Topic-Based Twitter Lists
             </a>
         </div>
 
         <div class="student-card" data-year="12">
             <h3>Buys, JM</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersBuysJM">
+            <a style="color:#FDB813" href="#" data-key="mastersBuysJM">
                 Probabilistic Tree Transducers for Grammatical Error Correction
             </a>
         </div>
 
         <div class="student-card" data-year="12">
             <h3>Bester, WHK</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersBesterWHK">
+            <a style="color:#FDB813" href="#" data-key="mastersBesterWHK">
                 Bug-Finding and Test Case Generation for Java Programs by Symbolic Execution
             </a>
         </div>
         <!--2012-->
         <div class="student-card" data-year="13">
             <h3>Venter, WJ</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersVenterWJ">
+            <a style="color:#FDB813" href="#" data-key="mastersVenterWJ">
                 An Embodied Conversational Agent with Autistic Behaviour
             </a>
         </div>
 
         <div class="student-card" data-year="13">
             <h3>Redelinghuys, GJ-W</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersRedelinghuysGJW">
+            <a style="color:#FDB813" href="#" data-key="mastersRedelinghuysGJW">
                 Symbolic String Execution
             </a>
         </div>
 
         <div class="student-card" data-year="13">
             <h3>Kruger, PJH</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersKrugerPJH">
+            <a style="color:#FDB813" href="#" data-key="mastersKrugerPJH">
                 Cellphone Banking at the Bottom of the Pyramid
             </a>
         </div>
 
         <div class="student-card" data-year="13">
             <h3>Huysamen, NF</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersHuysamenNF">
+            <a style="color:#FDB813" href="#" data-key="mastersHuysamenNF">
                 FATKID: A Finite Automaton Toolkit
             </a>
         </div>
 
         <div class="student-card" data-year="13">
             <h3>Goldberg, AS</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersGoldbergAS">
+            <a style="color:#FDB813" href="#" data-key="mastersGoldbergAS">
                 Investigating Credit Based Mechanisms for Enhancing Performance in Wireless Ad Hoc Networks
             </a>
         </div>
 
         <div class="student-card" data-year="13">
             <h3>Botha, SG</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersBothaSG">
+            <a style="color:#FDB813" href="#" data-key="mastersBothaSG">
                 The Effect of Evolutionary Rate Estimation Methods on Correlations Observed Between Substitution Rates in Models of Evolution
             </a>
         </div>
 
         <div class="student-card" data-year="13">
             <h3>Bezuidenhout, JA</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersBezuidenhoutJA">
+            <a style="color:#FDB813" href="#" data-key="mastersBezuidenhoutJA">
                 Automated Program Generation: Bridging the Gap Between Model and Implementation
             </a>
         </div>
         <!--2011-->
         <div class="student-card" data-year="14">
             <h3>Msiska, MF</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersMsiskaMF">
+            <a style="color:#FDB813" href="#" data-key="mastersMsiskaMF">
                 A Visual Programming Environment for Authoring ASD Therapy Tools
             </a>
         </div>
 
         <div class="student-card" data-year="14">
             <h3>Minoarivelo, HO</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersMinoariveloHO">
+            <a style="color:#FDB813" href="#" data-key="mastersMinoariveloHO">
                 Probabilistic Modelling of the Evolution of Ecological Interaction Networks
             </a>
         </div>
 
         <div class="student-card" data-year="14">
             <h3>Kassa, DF</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersKassaDF">
+            <a style="color:#FDB813" href="#" data-key="mastersKassaDF">
                 Analytic Models of TCP Performance
             </a>
         </div>
 
         <div class="student-card" data-year="14">
             <h3>Hayward, PJ</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersHaywardPJ">
+            <a style="color:#FDB813" href="#" data-key="mastersHaywardPJ">
                 Parallel Likelihood Calculations for Phylogenetic Trees
             </a>
         </div>
 
         <div class="student-card" data-year="14">
             <h3>Botha, LW</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersBothaLW">
+            <a style="color:#FDB813" href="#" data-key="mastersBothaLW">
                 Modeling Online Social Networks Using Quasi-Clique Communities
             </a>
         </div>
 
         <div class="student-card" data-year="14">
             <h3>Bergh, JR</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersBerghJR">
+            <a style="color:#FDB813" href="#" data-key="mastersBerghJR">
                 Ontology Comprehension
             </a>
         </div>
 
         <div class="student-card" data-year="14">
             <h3>Adams, RC</h3>
-            <a style="color:rgb(0,128,255)" href="#" data-key="mastersAdamsRC">
+            <a style="color:#FDB813" href="#" data-key="mastersAdamsRC">
                 Implementation of Cell Clustering in Cellular Automata
             </a>
         </div>
@@ -1178,546 +917,568 @@ select{
         <!--2010-->
         <div class="student-card" data-year="15">
             <h3>Schulze, W</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersSchulzeW">
                 A Formal Language Theory Approach to Music Generation
             </a>
         </div>
 
         <div class="student-card" data-year="15">
             <h3>Odendaal, MJ</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersOdendaalMJ">
                 Business Process Modelling Using Model Checking and the Theory of Constraints
             </a>
         </div>
 
         <div class="student-card" data-year="15">
             <h3>Fath Elrahman, TM</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersFathElrahmanTM">
                 QoS Routing in IP Networks Using Multi-Constrained Computational Methods
             </a>
         </div>
 
         <div class="student-card" data-year="15">
             <h3>Fasan, MO</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersFasanMO">
                 Distributed Binary Decision Diagrams
             </a>
         </div>
 
         <div class="student-card" data-year="15">
             <h3>Boulkaibet, I</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersBoulkaibetI">
                 Modelling Collaborative Motion in Mobile Ad Hoc Networks
             </a>
         </div>
         <!--2009-->
         <div class="student-card" data-year="16">
             <h3>Stapelberg, D</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersStapelbergD">
                 Link Failure Recovery Among Dynamic Routes in Telecommunication Networks
             </a>
         </div>
 
         <div class="student-card" data-year="16">
             <h3>Kriek, AM</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersKriekAM">
                 RoboCup Formation Modeling
             </a>
         </div>
 
         <div class="student-card" data-year="16">
             <h3>Greeff, GJ</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersGreeffGJ">
                 Interactive Voxel Terrain Design Using Procedural Techniques
             </a>
         </div>
 
         <div class="student-card" data-year="16">
             <h3>Fourie, JF</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersFourieJF">
                 Reducing Communication in Distributed Model Checking
             </a>
         </div>
 
         <div class="student-card" data-year="16">
             <h3>Crous, CB</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersCrousCB">
                 Autonomous Robot Path Planning
             </a>
         </div>
 
         <div class="student-card" data-year="16">
             <h3>Chamberlain, ME</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersChamberlainME">
                 A 3D Virtual Environment Development Platform for ASD Therapy Tools
             </a>
         </div>
         <!--2008-->
         <div class="student-card" data-year="17">
             <h3>Taha, MAMS</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersTahaMAMS">
                 Regulated Rewriting in Formal Language Theory
             </a>
         </div>
 
         <div class="student-card" data-year="17">
             <h3>Smal, E</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersSmalE">
                 Automated Brick Sculpture Construction
             </a>
         </div>
 
         <div class="student-card" data-year="17">
             <h3>Lusilao-Zodi, G-A</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersLusilaoZodiGA">
                 A Bandwidth Market in an IP Network
             </a>
         </div>
 
         <div class="student-card" data-year="17">
             <h3>Du Preez, H</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersDuPreezH">
                 GrailKnights: An Automaton Mass Manipulation Package for Enhanced Pattern Analysis
             </a>
         </div>
         <!--2007-->
         <div class="student-card" data-year="18">
             <h3>Welgemoed, Johan</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersWelgemoedJohan">
                 A Prototype System for Machine Translation from English to South African Sign Language Using Synchronous Tree Adjoining Grammars
             </a>
         </div>
 
         <div class="student-card" data-year="18">
             <h3>Seotsanyana, M</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersSeotsanyanaM">
                 Formal Specification and Verification of Safety Interlock Systems: A Comparative Case Study
             </a>
         </div>
 
         <div class="student-card" data-year="18">
             <h3>Mazandu, GK</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersMazanduGK">
                 Traffic Engineering Using Multipath Routing Approaches
             </a>
         </div>
 
         <div class="student-card" data-year="18">
             <h3>Gerber, DB</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersGerberDB">
                 A Model Checker for the LF System
             </a>
         </div>
 
         <div class="student-card" data-year="18">
             <h3>Baruani, AJ</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersBaruaniAJ">
                 Network Engineering Using Multi-Objective Evolutionary Algorithms
             </a>
         </div>
         <!--2006-->
         <div class="student-card" data-year="19">
             <h3>Raitt, LA</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersRaittLA">
                 Random Generation of Finite Automata Over the Domain of the Regular Languages
             </a>
         </div>
 
         <div class="student-card" data-year="19">
             <h3>Müller, G</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersMullerG">
                 Minimization of Symmetric Difference Finite Automata
             </a>
         </div>
 
         <div class="student-card" data-year="19">
             <h3>Louw, F</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersLouwF">
                 A Program Slicer for LF
             </a>
         </div>
 
         <div class="student-card" data-year="19">
             <h3>Grobler, LD</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersGroblerLD">
                 A Kernel to Support Computer-Aided Verification of Embedded Software
             </a>
         </div>
 
         <div class="student-card" data-year="19">
             <h3>Grift, W</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersGriftW">
                 Visualizing QoS in Networks
             </a>
         </div>
         <!--2005-->
         <div class="student-card" data-year="20">
             <h3>Combrink, AJ</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersCombrinkAJ">
                 A Preprocessor for an English-to-Sign Language Machine Translation System
             </a>
         </div>
 
         <div class="student-card" data-year="20">
             <h3>Barker, DD</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersBarkerDD">
                 Computer Facial Animation for Sign Language Visualization
             </a>
         </div>
         <!--2004-->
         <div class="student-card" data-year="21">
             <h3>Swart, R</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersSwartR">
                 A Language to Support Verification of Embedded Software
             </a>
         </div>
 
         <div class="student-card" data-year="21">
             <h3>De Jongh, AB</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersDeJonghAB">
                 Neural Network Ensembles
             </a>
         </div>
 
         <div class="student-card" data-year="21">
             <h3>Connan, J</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersConnanJ">
                 Collection, Evaluation and Selection of Scientific Literature: Machine Learning, Bibliometrics and the World Wide Web
             </a>
         </div>
 
         <div class="student-card" data-year="21">
             <h3>Combrink, JJ</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersCombrinkJJ">
                 A Bandwidth Market for Traffic Engineering in Telecommunication Networks
             </a>
         </div>
 
         <div class="student-card" data-year="21">
             <h3>Botha, M</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersBothaM">
                 Online Traffic Engineering for MPLS Networks
             </a>
         </div>
         <!--2003-->
         <div class="student-card" data-year="22">
             <h3>Snyders, S</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersSnydersS">
                 Inductive Machine Learning Bias in Knowledge-Based Neurocomputing
             </a>
         </div>
 
         <div class="student-card" data-year="22">
             <h3>Myburgh, WD</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersMyburghWD">
                 Development of a Tool to Test Computer Protocols
             </a>
         </div>
 
         <div class="student-card" data-year="22">
             <h3>Müller, KE</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersMullerKE">
                 MPLS-Based Recovery
             </a>
         </div>
 
         <div class="student-card" data-year="22">
             <h3>Kruger, AF</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersKrugerAF">
                 Machine Learning, Data Mining, and the World Wide Web: Design of Special-Purpose Search Engines
             </a>
         </div>
 
         <div class="student-card" data-year="22">
             <h3>Kroon, RS</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersKroonRS">
                 Support Vector Machines, Generalization Bounds, and Transduction
             </a>
         </div>
 
         <div class="student-card" data-year="22">
             <h3>Hakl, HM</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersHaklHM">
                 Computer-Controlled Human Body Coordination
             </a>
         </div>
 
         <div class="student-card" data-year="22">
             <h3>Bull, JJD</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersBullJJD">
                 A Comparison of Two Different Model Checking Techniques
             </a>
         </div>
 
         <div class="student-card" data-year="22">
             <h3>Andrag, WH</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersAndragWH">
                 Reinforcement Learning for Routing in Communication Networks
             </a>
         </div>
         <!--2002-->
         <div class="student-card" data-year="23">
             <h3>De Kock, JM</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersDeKockJM">
                 Optimal Management of MPLS Networks
             </a>
         </div>
         <!--2001-->
         <div class="student-card" data-year="24">
             <h3>Wessels, T</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersWesselsT">
                 Hidden Markov Models for On-Line Signature Verification
             </a>
         </div>
 
         <div class="student-card" data-year="24">
             <h3>Walsh, DA</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersWalshDA">
                 Automatic Detection of Image Orientation Using Support Vector Machines
             </a>
         </div>
 
         <div class="student-card" data-year="24">
             <h3>Wahabi, AR</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersWahabiAR">
                 Resource Management in IP Networks
             </a>
         </div>
 
         <div class="student-card" data-year="24">
             <h3>Van Zyl, J</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersVanZylJ">
                 Modelling Chaotic Systems with Neural Networks: Application to Seismic Event Predicting in Gold Mines
             </a>
         </div>
 
         <div class="student-card" data-year="24">
             <h3>Van Riet, FA</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersVanRietFA">
                 LF: A Language for Reliable Embedded Systems
             </a>
         </div>
 
         <div class="student-card" data-year="24">
             <h3>Esterhuyse, E</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersEsterhuyseE">
                 On Providing an Efficient and Reliable Virtual Block Storage Service
             </a>
         </div>
 
         <div class="student-card" data-year="24">
             <h3>Eloff, JJ</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersEloffJJ">
                 A Software Restructuring Tool for Oberon
             </a>
         </div>
 
         <div class="student-card" data-year="24">
             <h3>Du Toit, C</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersDuToitC">
                 The Use of Temporal Context in the Generation of Strings
             </a>
         </div>
 
         <div class="student-card" data-year="24">
             <h3>Bagula, BA</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersBagulaBA">
                 Traffic Engineering Label Switched Paths
             </a>
         </div>
         <!--2000-->
         <div class="student-card" data-year="25">
             <h3>Loubser, JJ</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersLoubserJJ">
                 Device Drivers: A Comparison of Different Development Strategies
             </a>
         </div>
         <!--1999-->
         <div class="student-card" data-year="26">
             <h3>Inggs, CP</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersInggsCP">
                 An LTL Verification System Based on Automata Theory
             </a>
         </div>
 
         <div class="student-card" data-year="26">
             <h3>Inggs, AM</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersInggsAM">
                 Efficient Call Management in Broadband Networks
             </a>
         </div>
 
         <div class="student-card" data-year="26">
             <h3>Geldenhuys, J</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersGeldenhuysJ">
                 Efficiency Issues in the Design of a Model Checker
             </a>
         </div>
 
         <div class="student-card" data-year="26">
             <h3>De Villiers, JA</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersDeVilliersJA">
                 Micro-Kernel Support for a Lightweight Extensible Workstation Operating System
             </a>
         </div>
         <!--1998-->
         <div class="student-card" data-year="27">
             <h3>De Wet, MJdV</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersDeWetMJdV">
                 A Development Environment for Reactive Systems
             </a>
         </div>
         <!--1996-->
         <div class="student-card" data-year="29">
             <h3>Staven, S</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersStavenS">
                 Entropy Maximized Queueing Networks
             </a>
         </div>
 
         <div class="student-card" data-year="29">
             <h3>Keyser, PW</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersKeyserPW">
                 Transaction Management in Multidatabase Systems
             </a>
         </div>
         <!--1995-->
         <div class="student-card" data-year="30">
             <h3>Winckler, CJ</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersWincklerCJ">
                 A Comprehensive Framework for SQL Query Execution in Distributed Multidatabase Systems
             </a>
         </div>
 
         <div class="student-card" data-year="30">
             <h3>Phillips, GP</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersPhillipsGP">
                 Transient Models For Queueing Networks
             </a>
         </div>
 
         <div class="student-card" data-year="30">
             <h3>Lockley, GJ</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersLockleyGJ">
                 The Design of a Specification Language Suitable for the Generation of Compilers
             </a>
         </div>
 
         <div class="student-card" data-year="30">
             <h3>Kriel, CF</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersKrielCF">
                 Order Independent Multiclass Queues: A New Class of Quasi-Reversible Queues
             </a>
         </div>
         <!--1994-->
         <div class="student-card" data-year="31">
             <h3>Zimmerman, AD</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersZimmermanAD">
                 Parallelizing a Bi-Directional Chart Parser for a Multicomputer
             </a>
         </div>
 
         <div class="student-card" data-year="31">
             <h3>Muller, PJ</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersMullerPJ">
                 An Environment for Distributed Programming on a Multicomputer
             </a>
         </div>
         <!--1993-->
         <div class="student-card" data-year="32">
             <h3>Visser, WC</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersVisserWC">
                 A Run-Time Environment for a Validation Language
             </a>
         </div>
 
         <div class="student-card" data-year="32">
             <h3>Van der Poel, E</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersVanderPoelE">
                 Visualizing Neural Networks
             </a>
         </div>
 
         <div class="student-card" data-year="32">
             <h3>Howard, WT</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersHowardWT">
                 An Efficient Resilient Page Store
             </a>
         </div>
 
         <div class="student-card" data-year="32">
             <h3>Engelbrecht, AP</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersEngelbrechtAP">
                 Modelling Algorithms for the South African Telephone Network
             </a>
         </div>
 
         <div class="student-card" data-year="32">
             <h3>Ackerman, MC</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersAckermanMC">
                 Kernel Support for Embedded Reactive Systems
             </a>
         </div>
         <div class="student-card" data-year="32">
             <h3>Ackerman, CC</h3>
-            <a style="color:rgb(0,128,255)" href="#">
+            <a style="color:#FDB813" href="#" data-key="mastersAckermanCC">
                 Providing Mechanical Support for Program Development in a Weakest Precondition Calculus
             </a>
         </div>
         <!--1992-->
         <div class="student-card" data-year="33">
             <h3>Viktor, HL</h3>
-            <a style="color:rgb(0,128,255)" href="#">A Comparative Study of Distributed Database Recovery Techniques</a>
+            <a style="color:#FDB813" href="#" data-key="mastersViktorHL">
+                A Comparative Study of Distributed Database Recovery Techniques
+            </a>
         </div>
 
         <div class="student-card" data-year="34">
             <h3>Meumann, MD</h3>
-            <a style="color:rgb(0,128,255)" href="#">The Design and Implementation of a Communication Kernel for a Distributed Database System</a>
+            <a style="color:#FDB813" href="#" data-key="mastersMeumannMD">
+                The Design and Implementation of a Communication Kernel for a Distributed Database System
+            </a>
         </div>
 
         <div class="student-card" data-year="34">
             <h3>Ludik, J</h3>
-            <a style="color:rgb(0,128,255)" href="#">'n Meerdoelige Simulasie Omgewing vir die Ontwikkeling van Neurale Netwerke</a>
+            <a style="color:#FDB813" href="#" data-key="mastersLudikJ">
+                'n Meerdoelige Simulasie Omgewing vir die Ontwikkeling van Neurale Netwerke
+            </a>
         </div>
 
         <div class="student-card" data-year="34">
             <h3>Fouche, W</h3>
-            <a style="color:rgb(0,128,255)" href="#">An Efficient Kernel to Support the Client-Server Model</a>
+            <a style="color:#FDB813" href="#" data-key="mastersFoucheW">
+                An Efficient Kernel to Support the Client-Server Model
+            </a>
         </div>
 
         <div class="student-card" data-year="34">
             <h3>Deacon, AE</h3>
-            <a style="color:rgb(0,128,255)" href="#">Concurrency Control Mechanisms for Multidatabase Systems</a>
+            <a style="color:#FDB813" href="#" data-key="mastersDeaconAE">
+                Concurrency Control Mechanisms for Multidatabase Systems
+            </a>
         </div>
 
         <div class="student-card" data-year="34">
             <h3>Barnard, DC</h3>
-            <a style="color:rgb(0,128,255)" href="#">Reducing the State Explosion Problem During Model Checking</a>
+            <a style="color:#FDB813" href="#" data-key="mastersBarnardDC">
+                Reducing the State Explosion Problem During Model Checking
+            </a>
         </div>
 
         <div class="student-card" data-year="35">
             <h3>Theron, H</h3>
-            <a style="color:rgb(0,128,255)" href="#">A Survey and Comparison of Well-Known Concept Induction Algorithms</a>
+            <a style="color:#FDB813" href="#" data-key="mastersTheronH">
+                A Survey and Comparison of Well-Known Concept Induction Algorithms
+            </a>
         </div>
 
         <div class="student-card" data-year="35">
             <h3>Lamprecht, SM</h3>
-            <a style="color:rgb(0,128,255)" href="#">A Comparative Study of Distributed Query Optimization Methods</a>
+            <a style="color:#FDB813" href="#" data-key="mastersLamprechtSM">
+                A Comparative Study of Distributed Query Optimization Methods
+            </a>
         </div>
 
         <div class="student-card" data-year="35">
             <h3>Harmse, MFP</h3>
-            <a style="color:rgb(0,128,255)" href="#">The Analytic Modelling of DASD Subsystems</a>
+            <a style="color:#FDB813" href="#" data-key="mastersHarmseMFP">
+                The Analytic Modelling of DASD Subsystems
+            </a>
         </div>
 
         <div class="student-card" data-year="35">
             <h3>Greeff, J</h3>
-            <a style="color:rgb(0,128,255)" href="#">Derivation and Implementation of an Extended Entity-Relationship Data Model</a>
+            <a style="color:#FDB813" href="#" data-key="mastersGreeffJ">
+                Derivation and Implementation of an Extended Entity-Relationship Data Model
+            </a>
         </div>
 
         <div class="student-card" data-year="35">
             <h3>Crosby, SA</h3>
-            <a style="color:rgb(0,128,255)" href="#">Queueing Networks with Blocking and Simultaneous Resource Possession</a>
+            <a style="color:#FDB813" href="#" data-key="mastersCrosbySA">
+                Queueing Networks with Blocking and Simultaneous Resource Possession
+            </a>
         </div>
         </div>
 
@@ -1825,22 +1586,6 @@ select{
               >Research</a
             >
           </li>
-          <li>
-            <a
-              href="faculties.html"
-              class="text-neutral-400 text-sm hover:text-secondary-300 transition-colors"
-              data-key="footerFaculties"
-              >Faculties</a
-            >
-          </li>
-          <li>
-            <a
-              href="short-courses.html"
-              class="text-neutral-400 text-sm hover:text-secondary-300 transition-colors"
-              data-key="footerShortCourses"
-              >Short Courses</a
-            >
-          </li>
         </ul>
       </div>
       <div>
@@ -1865,31 +1610,6 @@ select{
               class="text-neutral-400 text-sm hover:text-secondary-300 transition-colors"
               data-key="footerPeople"
               >People</a
-            >
-          </li>
-          <li>
-            <a
-              href="news.html"
-              class="text-neutral-400 text-sm hover:text-secondary-300 transition-colors"
-              data-key="footerNews"
-              >News</a
-            >
-          </li>
-          <li>
-            <a
-              target="_blank"
-              href="http://www.campusmap.sun.ac.za"
-              class="text-neutral-400 text-sm hover:text-secondary-300 transition-colors"
-              data-key="footerCampusMap"
-              >Campus Map</a
-            >
-          </li>
-          <li>
-            <a
-              href="sustainability.html"
-              class="text-neutral-400 text-sm hover:text-secondary-300 transition-colors"
-              data-key="footerSustainability"
-              >Sustainability</a
             >
           </li>
         </ul>
@@ -2017,358 +1737,10 @@ select{
       </div>
     </div>
   </div>
-</footer>
-
-<script>
-    
-
-const doctorStudentsContainer = document.getElementById("doctor-students");
-const mastersStudentsContainer = document.getElementById("masters-students");
-
-document.getElementById("doctor-select").addEventListener("change", function() {
-    const selectedYear = this.value;
-    const students = doctorStudentsContainer.querySelectorAll(".student-card");
-
-    students.forEach(student => {
-        if (selectedYear === "" || student.dataset.year === selectedYear) {
-            student.style.display = "block";
-        } else {
-            student.style.display = "none";
-        }
-    });
-});
-
-document.getElementById("masters-select").addEventListener("change", function() {
-    const selectedYear = this.value;
-    const students = mastersStudentsContainer.querySelectorAll(".student-card");
-
-    students.forEach(student => {
-        if (selectedYear === "" || student.dataset.year === selectedYear) {
-            student.style.display = "block";
-        } else {
-            student.style.display = "none";
-        }
-    });
-});
-
-
-
-      function loadComponent(id, file) {
-        fetch(file)
-          .then(res => res.text())
-          .then(data => {
-            document.getElementById(id).innerHTML = data;
-          });
-      }
-
-      document.addEventListener("DOMContentLoaded", () => {
-        loadComponent("header-placeholder", "header.html");
-        loadComponent("footer-placeholder", "footer.html");
-      });
-      
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              heading: ["var(--font-heading-name)", "serif"],
-              body: ["var(--font-body-name)", "sans-serif"],
-            },
-            spacing: {
-              base: "var(--space-base)",
-            },
-            borderRadius: {
-              small: "var(--radius-small)",
-              large: "var(--radius-large)",
-            },
-            boxShadow: {
-              custom: "var(--shadow-custom)",
-              "custom-hover": "var(--shadow-custom-hover)",
-            },
-            colors: {
-              primary: {
-                50: "#f6e9ec",
-                100: "#e7c7cf",
-                200: "#d6a2b0",
-                300: "#c47c90",
-                400: "#b45f77",
-                500: "#a3425f", // Base maroon
-                600: "#87344d",
-                700: "#68263b",
-                800: "#4c1a2a",
-                900: "#300e19",
-              },
-              secondary: {
-                50: "#fef5e7",
-                100: "#fde5b8",
-                200: "#fcd485",
-                300: "#fbc352",
-                400: "#fab52e",
-                500: "#f9a80a",
-                600: "#e09500",
-                700: "#b87a00",
-                800: "#8f5f00",
-                900: "#664400",
-              },
-              neutral: {
-                50: "#f8f9fa",
-                100: "#f1f3f5",
-                200: "#e9ecef",
-                300: "#dee2e6",
-                400: "#ced4da",
-                500: "#adb5bd",
-                600: "#6c757d",
-                700: "#495057",
-                800: "#343a40",
-                900: "#212529",
-              },
-              background: {
-                50: "#ffffff",
-                100: "#f8f9fa",
-                200: "#f1f3f5",
-                300: "#e9ecef",
-                400: "#dee2e6",
-                500: "#ced4da",
-                600: "#adb5bd",
-                700: "#6c757d",
-                800: "#343a40",
-                900: "#212529",
-              },
-            },
-          },
-        },
-      };
-    
-      const translations = {
-        en: {
-          brandNameShort: "Stellenbosch",
-          brandUniversity: "University",
-
-          labelEn: "EN",
-          labelAf: "AF",
-
-          navAbout: "About",
-          navAcademics: "Academics",
-          navPeople: "People",
-          navNews: "News",
-          navContact: "Contact",
-          navLinks: "Links",
-          navUndergraduate: "Undergraduate",
-          navPostgraduate: "Postgraduate",
-          navResearch: "Research",
-          navStaff: "Staff",
-          navAlumni: "Alumni",
-          navStudents: "Students",
-          navStellenboschUniversity: "Stellenbosch University",
-          navScienceFaculty: "Science Faculty",
-          navMathematicalSciences: "Mathematical Sciences",
-          navInstituteOfAppliedCS: "Institute of Applied CS",
-          navTelkomNSNCEO: "Telkom-NSN CEO",
-
-          ctaApplyNow: "Apply Now",
-
-          footerBrandFull: "Stellenbosch University",
-          footerEst: "Est. 1918",
-          footerDescription:
-            "A leading African research university committed to excellence, innovation, and inclusive education for a better world.",
-
-          footerAcademicsHeading: "Academics",
-          footerUndergraduate: "Undergraduate",
-          footerPostgraduate: "Postgraduate",
-          footerResearch: "Research",
-          footerFaculties: "Faculties",
-          footerShortCourses: "Short Courses",
-
-          footerAboutHeading: "About SU",
-          footerAboutUs: "About Us",
-          footerPeople: "People",
-          footerNews: "News",
-          footerCampusMap: "Campus Map",
-          footerSustainability: "Sustainability",
-
-          footerContactHeading: "Contact",
-          footerAddress: "Victoria St, Stellenbosch, 7600, South Africa",
-          footerPhone1: "+27 61 729 8858",
-          footerPhone2: "+27 21 808 9111",
-          footerEmail: "info@sun.ac.za",
-
-          footerPrivacyPolicy: "Privacy Policy",
-          footerTermsOfUse: "Terms of Use",
-          footerAccessibility: "Accessibility",
-          footerCopyright:
-            "© 2026 Stellenbosch University & MediaBay. All rights reserved.",
-
-          // Alumni page specific
-          alumniFacultyTitle: "Alumni Faculty",
-          doctoralGraduatesTitle: "Doctoral Graduates",
-          mastersGraduatesTitle: "Masters Graduates",
-          selectYearDoctoral: "Select Year",
-          selectYearMasters: "Select Year",
-        },
-        af: {
-          brandNameShort: "Stellenbosch",
-          brandUniversity: "Universiteit",
-
-          labelEn: "EN",
-          labelAf: "AF",
-
-          navAbout: "Oor",
-          navAcademics: "Akademies",
-          navPeople: "Mense",
-          navNews: "Nuus",
-          navContact: "Kontak",
-          navLinks: "Skakels",
-          navUndergraduate: "Voorgraadse",
-          navPostgraduate: "Nagraadse",
-          navResearch: "Navorsing",
-          navStaff: "Personeel",
-          navAlumni: "Alumni",
-          navStellenboschUniversity: "Universiteit Stellenbosch",
-          navScienceFaculty: "Wetenskapsfakulteit",
-          navMathematicalSciences: "Wiskundige Wetenskappe",
-          navInstituteOfAppliedCS: "Instituut vir Toegepaste Rekenaarwetenskap",
-          navTelkomNSNCEO: "Telkom-NSN HUB",
-
-          ctaApplyNow: "Doen Nou Aansoek",
-
-          footerBrandFull: "Universiteit Stellenbosch",
-          footerEst: "Gest. 1918",
-          footerDescription:
-            "’n Toonaangewende Afrika-navorsingsuniversiteit wat toegewy is aan uitnemendheid, innovasie en inklusiewe onderrig vir ’n beter wêreld.",
-
-          footerAcademicsHeading: "Akademies",
-          footerUndergraduate: "Voorgraadse",
-          footerPostgraduate: "Nagraadse",
-          footerResearch: "Navorsing",
-          footerFaculties: "Fakulteite",
-          footerShortCourses: "Kort Kursusse",
-
-          footerAboutHeading: "Oor SU",
-          footerAboutUs: "Oor Ons",
-          footerPeople: "Mense",
-          footerNews: "Nuus",
-          footerCampusMap: "Kampuskaart",
-          footerSustainability: "Volhoubaarheid",
-
-          footerContactHeading: "Kontak",
-          footerAddress: "Victoria Straat, Stellenbosch, 7600, Suid-Afrika",
-          footerPhone1: "+27 61 729 8858",
-          footerPhone2: "+27 21 808 9111",
-          footerEmail: "info@sun.ac.za",
-
-          footerPrivacyPolicy: "Privaatheidsbeleid",
-          footerTermsOfUse: "Gebruiksvoorwaardes",
-          footerAccessibility: "Toeganklikheid",
-          footerCopyright:
-            "© 2026 Universiteit Stellenbosch & MediaBay. Alle regte voorbehou.",
-
-          // Alumni page specific
-          alumniFacultyTitle: "Alumni-fakulteit",
-          doctoralGraduatesTitle: "Doktorale Gegradueerdes",
-          mastersGraduatesTitle: "Meestersgegradueerdes",
-          selectYearDoctoral: "Kies Jaar",
-          selectYearMasters: "Kies Jaar",
-        },
-      };
-
-      const DEFAULT_LANG = "en";
-      const STORAGE_KEY = "siteLanguage";
-
-      function getInitialLanguage() {
-        try {
-          const stored = localStorage.getItem(STORAGE_KEY);
-          if (stored && translations[stored]) {
-            return stored;
-          }
-        } catch (e) {
-          // ignore
-        }
-        return DEFAULT_LANG;
-      }
-
-      function saveLanguage(lang) {
-        try {
-          localStorage.setItem(STORAGE_KEY, lang);
-        } catch (e) {
-          // ignore
-        }
-      }
-
-      let mastersTranslations = null;
-      let mastersTranslationsLoaded = false;
-
-      function loadMastersTranslations() {
-        if (mastersTranslationsLoaded) {
-          return Promise.resolve(mastersTranslations);
-        }
-        return fetch("i18n-alumni-masters.json")
-          .then((res) => res.json())
-          .then((data) => {
-            mastersTranslations = data;
-            mastersTranslationsLoaded = true;
-            return data;
-          })
-          .catch(() => {
-            mastersTranslationsLoaded = true;
-            mastersTranslations = null;
-            return null;
-          });
-      }
-
-      function applyMastersLanguage(lang) {
-        if (!mastersTranslations || !mastersTranslations[lang]) return;
-        const langPack = mastersTranslations[lang];
-        document.querySelectorAll('[data-key^="mastersThesis"]').forEach((el) => {
-          const key = el.getAttribute("data-key");
-          const value = langPack[key];
-          if (typeof value === "string") {
-            el.textContent = value;
-          }
-        });
-      }
-
-      function applyLanguage(lang) {
-        const langPack = translations[lang] || translations[DEFAULT_LANG];
-        document.documentElement.lang = lang;
-
-        document.querySelectorAll("[data-key]").forEach((el) => {
-          const key = el.getAttribute("data-key");
-          const value = langPack[key];
-          if (typeof value === "string") {
-            el.textContent = value;
-          }
-        });
-      }
-
-      function syncToggleWithLanguage(lang) {
-        const toggle = document.getElementById("languageToggle");
-        if (!toggle) return;
-        toggle.checked = lang === "af";
-      }
-
-      function initLanguageToggle() {
-        const currentLang = getInitialLanguage();
-        applyLanguage(currentLang);
-        loadMastersTranslations().then(() => {
-          applyMastersLanguage(currentLang);
-        });
-        syncToggleWithLanguage(currentLang);
-
-        const toggle = document.getElementById("languageToggle");
-        if (!toggle) return;
-
-        toggle.addEventListener("change", () => {
-          const newLang = toggle.checked ? "af" : "en";
-          applyLanguage(newLang);
-          loadMastersTranslations().then(() => {
-            applyMastersLanguage(newLang);
-          });
-          saveLanguage(newLang);
-        });
-      }
-
-      document.addEventListener("DOMContentLoaded", initLanguageToggle);
-    </script>
+</footer>\n<script src="js/alumni.js"></script>
   </body>
 </html>
+
+
 
 

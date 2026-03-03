@@ -28,6 +28,7 @@
       rel="stylesheet"
     />
     <script src="js/postgraduate-modules.js"></script>
+    <script src="js/homepage.js"></script>
     <script src="js/global.js"></script>
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/postgraduate-modules.css" />
@@ -37,9 +38,9 @@
     style="height: auto; min-height: 100%"
   >
     <!-- Sticky Header -->
-    <header class="sticky top-0 z-50 bg-primary-900 shadow-custom">
-      <!-- Top utility bar -->
-      
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-50 bg-[#420303] shadow-custom">
+
 
       <!-- Main nav -->
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,12 +58,14 @@
             </div>
             <div class="hidden sm:block">
               <div
-                class="font-heading text-neutral-50 text-base font-semibold leading-tight"
+                class="font-heading text-neutral-50 text-lg sm:text-xl lg:text-2xl font-semibold leading-tight"
+                data-key="brandNameShort"
               >
                 Stellenbosch
               </div>
               <div
                 class="text-secondary-300 text-xs font-medium tracking-widest uppercase"
+                data-key="brandUniversity"
               >
                 University
               </div>
@@ -71,18 +74,12 @@
 
           <!-- Nav links -->
           <nav class="hidden lg:flex items-center gap-1">
-            <a
-              href="about-page.html"
-              class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors"
-              >About</a
-            >
-
             <!-- Academics dropdown -->
             <div class="dropdown relative">
               <button
                 class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors flex items-center gap-1"
               >
-                Academics
+                <span data-key="navAcademics">Academics</span>
                 <svg
                   class="w-3.5 h-3.5 text-neutral-400"
                   fill="none"
@@ -98,37 +95,34 @@
                 </svg>
               </button>
               <div
-                class="dropdown-menu hidden absolute top-full left-0 mt-1 w-52 bg-white rounded-large shadow-custom-hover border border-neutral-200 py-1 z-50"
+                class="dropdown-menu hidden absolute top-full left-0 w-52 bg-white rounded-large shadow-custom-hover border border-neutral-200 py-1 z-50"
               >
                 <a
                   href="undergraduate.html"
                   class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                  data-key="navUndergraduate"
                   >Undergraduate</a
                 >
                 <a
                   href="postgraduate.html"
                   class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                  data-key="navPostgraduate"
                   >Postgraduate</a
                 >
                 <a
                   href="research.html"
                   class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                  data-key="navResearch"
                   >Research</a
                 >
               </div>
             </div>
-
-            <a
-              href="research.html"
-              class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors"
-              >Research</a
-            >
-
-            <div class="dropdown relative">
+            
+              <div class="dropdown relative">
               <button
                 class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors flex items-center gap-1"
               >
-                People
+                <span data-key="navPeople">People</span>
                 <svg
                   class="w-3.5 h-3.5 text-neutral-400"
                   fill="none"
@@ -144,81 +138,108 @@
                 </svg>
               </button>
               <div
-                class="dropdown-menu hidden absolute top-full left-0 mt-1 w-52 bg-white rounded-large shadow-custom-hover border border-neutral-200 py-1 z-50"
+                class="dropdown-menu hidden absolute top-full left-0 w-52 bg-white rounded-large shadow-custom-hover border border-neutral-200 py-1 z-50"
               >
                 <a
-                  href="stuff.html"
+                  href="staff-page.html"
                   class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
-                  >Stuff</a
+                  data-key="navStaff"
+                  >Staff</a
                 >
                 <a
-                  href="students.html"
-                  class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
-                  >Students</a
-                >
+                href="student-page.html"
+                class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                data-key="navStudents"
+                >Students</a
+              >
                 <a
-                  href="alumni.html"
+                  href="alumni-page.html"
                   class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                  data-key="navAlumni"
                   >Alumni</a
                 >
               </div>
             </div>
-            <a
-              href="news.html"
-              class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors"
-              >News</a
-            >
-            <a
-              href="contact-page.html"
-              class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors"
-              >Contact</a
-            >
+            <div class="dropdown relative">
+              <button
+                class="nav-link-hover text-neutral-200 text-sm font-medium px-3 py-2 rounded-small hover:bg-primary-800 transition-colors flex items-center gap-1"
+              >
+                <span data-key="navLinks">Links</span>
+                <svg
+                  class="w-3.5 h-3.5 text-neutral-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div
+                class="dropdown-menu hidden absolute top-full left-0 w-52 bg-white rounded-large shadow-custom-hover border border-neutral-200 py-1 z-50"
+              >
+                <a
+                  href="https://www.su.ac.za/en"
+                  class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                  data-key="navStellenboschUniversity"
+                  >Stellenbosch University</a
+                >
+                <a
+                  href="https://www.su.ac.za/en/faculties/science"
+                  class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                  data-key="navScienceFaculty"
+                  >Science Faculty</a
+                >
+                <a
+                href="https://www.su.ac.za/en/apply/pg-studies/mathematical-sciences"
+                class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                data-key="navMathematicalSciences"
+                >Mathematical Sciences</a
+              >
+                <a
+                href="https://www.cs.sun.ac.za/iacs/"
+                class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                data-key="navInstituteOfAppliedCS"
+                >Institute of Applied CS</a
+              >
+                <a
+                href="https://group.telkom.co.za/governance/management-team.html"
+                class="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                data-key="navTelkomNSNCEO"
+                >Telkom-NSN CEO</a
+              >
+              </div>
+            </div>
+                                 <a href="homepage.html#contact" class="nav-link-hover ...">Contact</a>
+
+            
           </nav>
 
           <!-- CTA Buttons -->
+           
           <div class="hidden lg:flex items-center gap-2">
             <a
               href="undergraduate.html"
               class="bg-secondary-400 hover:bg-secondary-300 text-primary-900 text-sm font-semibold px-4 py-2 rounded-small transition-colors"
+              data-key="ctaApplyNow"
               >Apply Now</a
             >
-            <button
-              id="search-button"
-              aria-label="Search site"
-              class="text-neutral-200 hover:text-neutral-50 p-2 rounded-small hover:bg-primary-800 transition-colors"
-            >
-              <svg
-                class="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
-            </button>
           </div>
-
-          <!-- Mobile menu button -->
-          <button class="lg:hidden text-neutral-200 p-2">
-            <svg
-              class="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
+          <div class="flex items-center gap-2 text-white text-sm font-semibold">
+            <span data-key="labelEn">EN</span>
+          
+            <label class="switch">
+              <input type="checkbox" id="languageToggle">
+              <span class="slider round"></span>
+            </label>
+          
+            <span data-key="labelAf">AF</span>
+          </div>
+          
         </div>
       </div>
     </header>
@@ -1008,22 +1029,6 @@
               >Research</a
             >
           </li>
-          <li>
-            <a
-              href="faculties.html"
-              class="text-neutral-400 text-sm hover:text-secondary-300 transition-colors"
-              data-key="footerFaculties"
-              >Faculties</a
-            >
-          </li>
-          <li>
-            <a
-              href="short-courses.html"
-              class="text-neutral-400 text-sm hover:text-secondary-300 transition-colors"
-              data-key="footerShortCourses"
-              >Short Courses</a
-            >
-          </li>
         </ul>
       </div>
       <div>
@@ -1048,31 +1053,6 @@
               class="text-neutral-400 text-sm hover:text-secondary-300 transition-colors"
               data-key="footerPeople"
               >People</a
-            >
-          </li>
-          <li>
-            <a
-              href="news.html"
-              class="text-neutral-400 text-sm hover:text-secondary-300 transition-colors"
-              data-key="footerNews"
-              >News</a
-            >
-          </li>
-          <li>
-            <a
-              target="_blank"
-              href="http://www.campusmap.sun.ac.za"
-              class="text-neutral-400 text-sm hover:text-secondary-300 transition-colors"
-              data-key="footerCampusMap"
-              >Campus Map</a
-            >
-          </li>
-          <li>
-            <a
-              href="sustainability.html"
-              class="text-neutral-400 text-sm hover:text-secondary-300 transition-colors"
-              data-key="footerSustainability"
-              >Sustainability</a
             >
           </li>
         </ul>
